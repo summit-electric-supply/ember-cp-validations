@@ -1,7 +1,7 @@
 {
   "name": "@summit-electric-supply/ember-cp-validations",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember computed property based validation library",
   "keywords": [
     "ember-addon"
   ],
