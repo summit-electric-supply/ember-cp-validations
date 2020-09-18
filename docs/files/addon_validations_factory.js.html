@@ -27,7 +27,7 @@
 
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/offirgolan/ember-cp-validations" class="fa fa-github github"></a></li>
+            <li><a href="https://github.com/summit-electric-supply/ember-cp-validations" class="fa fa-github github"></a></li>
           </ul>
         </div>
       </div>
@@ -54,8 +54,8 @@
                     <li class="panel panel-default">
                         <div class="panel-heading" role="tab" id="sidebar-version-heading">
                             <h4 class="panel-title">
-                                <a role="button" href="https://github.com/offirgolan/ember-cp-validations/commits/v4.0.0-beta.10" target="_blank">
-                                  Tag: v4.0.0-beta.10
+                                <a role="button" href="https://github.com/summit-electric-supply/ember-cp-validations/commits/v4.1.0-beta.1" target="_blank">
+                                  Tag: v4.1.0-beta.1
                                 </a>
                             </h4>
                         </div>
@@ -71,10 +71,6 @@
                     <div id="sidebar-modules" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="sidebar-modules-heading">
                         <div class="panel-body">
                                 <ol>
-                                        <li>
-                                            <a href="../modules/Templating.html">Templating</a>
-                                                    <li class="sub"><a href="../modules/V-Get Helper.html">V-Get Helper</a></li>
-                                        </li>
                                         <li>
                                             <a href="../modules/Usage.html">Usage</a>
                                                     <li class="sub"><a href="../modules/Basic.html">Basic</a></li>
@@ -188,7 +184,7 @@
     <pre class="prettyprint linenums">
 import Mixin from &#x27;@ember/object/mixin&#x27;;
 import { Promise } from &#x27;rsvp&#x27;;
-import EmberObject, { getWithDefault, computed, set, get } from &#x27;@ember/object&#x27;;
+import EmberObject, { computed, set, get } from &#x27;@ember/object&#x27;;
 import { A as emberArray, makeArray, isArray } from &#x27;@ember/array&#x27;;
 import { readOnly } from &#x27;@ember/object/computed&#x27;;
 import { assign } from &#x27;@ember/polyfills&#x27;;
@@ -685,10 +681,10 @@ function generateValidationResultsFor(
 
   return validators.map(validator =&gt; {
     let options = get(validator, &#x27;options&#x27;).toObject();
-    let isWarning = getWithDefault(options, &#x27;isWarning&#x27;, false);
-    let disabled = getWithDefault(options, &#x27;disabled&#x27;, false);
-    let debounce = getWithDefault(options, &#x27;debounce&#x27;, 0);
-    let lazy = getWithDefault(options, &#x27;lazy&#x27;, true);
+    let isWarning = get(options, &#x27;isWarning&#x27;) ?? false;
+    let disabled = get(options, &#x27;disabled&#x27;) ?? false;
+    let debounce = get(options, &#x27;debounce&#x27;) ?? 0;
+    let lazy = get(options, &#x27;lazy&#x27;) ?? true;
 
     if (disabled || (lazy &amp;&amp; isInvalid) || !isModelValidatable) {
       value = true;
@@ -802,9 +798,9 @@ function getCPDependentKeysFor(attribute, model, validations) {
       ...dependents,
 
       // Get all explicitly defined dependents
-      ...getWithDefault(options, &#x27;dependentKeys&#x27;, []),
-      ...getWithDefault(validation, &#x27;defaultOptions.dependentKeys&#x27;, []),
-      ...getWithDefault(validation, &#x27;globalOptions.dependentKeys&#x27;, []),
+      ...get(options, &#x27;dependentKeys&#x27;) ?? [],
+      ...get(validation, &#x27;defaultOptions.dependentKeys&#x27;) ?? [],
+      ...get(validation, &#x27;globalOptions.dependentKeys&#x27;) ?? [],
 
       // Extract implicit dependents from CPs
       ...extractOptionsDependentKeys(options),

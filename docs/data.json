@@ -2,17 +2,17 @@
     "project": {
         "name": "Ember CP Validations",
         "description": "Ember computed property based validations",
-        "url": "https://github.com/offirgolan/ember-cp-validations",
+        "url": "https://github.com/summit-electric-supply/ember-cp-validations",
         "indexModule": "Usage",
         "externalDocs": [
             {
-                "name": "ember-validators",
-                "path": "node_modules/ember-validators",
-                "url": "https://github.com/offirgolan/ember-validators",
+                "name": "@summit-electric-supply/ember-validators",
+                "path": "node_modules/@summit-electric-supply/ember-validators",
+                "url": "https://github.com/summit-electric-supply/ember-validators",
                 "version": "master"
             }
         ],
-        "version": "v4.0.0-beta.10"
+        "version": "v4.1.0-beta.1"
     },
     "files": {
         "addon/-private/result.js": {
@@ -21,6 +21,13 @@
             "classes": {
                 "Result": 1
             },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/helpers/v-get.js": {
+            "name": "addon/helpers/v-get.js",
+            "modules": {},
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -236,18 +243,17 @@
             "fors": {},
             "namespaces": {}
         },
-        "htmlbars-plugins/v-get.js": {
-            "name": "htmlbars-plugins/v-get.js",
-            "modules": {
-                "Templating": 1,
-                "V-Get Helper": 1
-            },
+        "node_modules/@summit-electric-supply/ember-validators/addon/utils/can-invoke.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/utils/can-invoke.js",
+            "modules": {},
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Ember": 1
+            },
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/collection.js": {
-            "name": "node_modules/ember-validators/addon/collection.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/collection.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/collection.js",
             "modules": {},
             "classes": {
                 "Collection": 1
@@ -255,8 +261,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/confirmation.js": {
-            "name": "node_modules/ember-validators/addon/confirmation.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/confirmation.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/confirmation.js",
             "modules": {},
             "classes": {
                 "Confirmation": 1
@@ -264,8 +270,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/date.js": {
-            "name": "node_modules/ember-validators/addon/date.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/date.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/date.js",
             "modules": {},
             "classes": {
                 "Date": 1
@@ -273,8 +279,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/ds-error.js": {
-            "name": "node_modules/ember-validators/addon/ds-error.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/ds-error.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/ds-error.js",
             "modules": {},
             "classes": {
                 "DS Error": 1
@@ -282,8 +288,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/exclusion.js": {
-            "name": "node_modules/ember-validators/addon/exclusion.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/exclusion.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/exclusion.js",
             "modules": {},
             "classes": {
                 "Exclusion": 1
@@ -291,8 +297,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/format.js": {
-            "name": "node_modules/ember-validators/addon/format.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/format.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/format.js",
             "modules": {},
             "classes": {
                 "Format": 1
@@ -300,8 +306,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/inclusion.js": {
-            "name": "node_modules/ember-validators/addon/inclusion.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/inclusion.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/inclusion.js",
             "modules": {},
             "classes": {
                 "Inclusion": 1
@@ -309,8 +315,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/length.js": {
-            "name": "node_modules/ember-validators/addon/length.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/length.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/length.js",
             "modules": {},
             "classes": {
                 "Length": 1
@@ -318,8 +324,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/messages.js": {
-            "name": "node_modules/ember-validators/addon/messages.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/messages.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
             "modules": {},
             "classes": {
                 "Messages": 1
@@ -327,8 +333,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/number.js": {
-            "name": "node_modules/ember-validators/addon/number.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/number.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/number.js",
             "modules": {},
             "classes": {
                 "Number": 1
@@ -336,8 +342,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "node_modules/ember-validators/addon/presence.js": {
-            "name": "node_modules/ember-validators/addon/presence.js",
+        "node_modules/@summit-electric-supply/ember-validators/addon/presence.js": {
+            "name": "node_modules/@summit-electric-supply/ember-validators/addon/presence.js",
             "modules": {},
             "classes": {
                 "Presence": 1
@@ -413,7 +419,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "main",
-            "file": "node_modules/ember-validators/addon/presence.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/presence.js",
             "line": 7,
             "itemtype": "main"
         },
@@ -439,8 +445,12 @@
                 "I18n Solutions": 1
             },
             "elements": {},
-            "classes": {},
-            "fors": {},
+            "classes": {
+                "Ember": 1
+            },
+            "fors": {
+                "Ember": 1
+            },
             "namespaces": {},
             "tag": "module",
             "file": "addon/index.js",
@@ -459,7 +469,7 @@
             "namespace": "",
             "file": "addon/index.js",
             "line": 22,
-            "description": "## Models\n\nThe first thing we need to do is build our validation rules. This will then generate a Mixin that you will be able to incorporate into your model or object.\n\n```javascript\n// models/user.js\n\nimport Ember from 'ember';\nimport DS from 'ember-data';\nimport { validator, buildValidations } from 'ember-cp-validations';\n\nconst Validations = buildValidations({\n  username: validator('presence', true),\n  password: [\n    validator('presence', true),\n    validator('length', {\n      min: 4,\n      max: 8\n    })\n  ],\n  email: [\n    validator('presence', true),\n    validator('format', { type: 'email' })\n  ],\n  emailConfirmation: [\n    validator('presence', true),\n    validator('confirmation', {\n      on: 'email',\n      message: '{description} do not match',\n      description: 'Email addresses'\n    })\n  ]\n});\n```\n\nOnce our rules are created and our Mixin is generated, all we have to do is add it to our model.\n\n```javascript\n// models/user.js\n\nexport default DS.Model.extend(Validations, {\n  'username': attr('string'),\n  'password': attr('string'),\n  'email': attr('string')\n});\n```\n\n## Objects\n\nYou can also use the generated `Validations` mixin on any `Ember.Object` or child\nof `Ember.Object`, like `Ember.Component`. For example:\n\n```javascript\n// components/x-foo.js\n\nimport Ember from 'ember';\nimport { validator, buildValidations } from 'ember-cp-validations';\n\nconst Validations = buildValidations({\n  bar: validator('presence', true)\n});\n\nexport default Ember.Component.extend(Validations, {\n  bar: null\n});\n```\n\n```javascript\n// models/user.js\n\nexport default Ember.Object.extend(Validations, {\n  username: null\n});\n```\n\n## A Note on Testing & Object Containers\n\nTo lookup validators, container access is required, which can cause an issue with `Ember.Object` creation\nif the object is statically imported. The current fix for this is as follows.\n\n**Ember < 2.3.0**\n\n```javascript\n// routes/index.js\n\nimport User from '../models/user';\n\nexport default Ember.Route.extend({\n  model() {\n    const container = this.get('container');\n    return User.create({ username: 'John', container })\n  }\n});\n```\n\n**Ember >= 2.3.0**\n\n```javascript\n// routes/index.js\n\nimport User from '../models/user';\n\nexport default Ember.Route.extend({\n  model() {\n    return User.create(\n     Ember.getOwner(this).ownerInjection(),\n     { username: 'John' }\n    );\n  }\n});\n```\n\nThis also has ramifications for Ember Data model tests. When using [Ember QUnit's `moduleForModel`](https://github.com/emberjs/ember-qunit#ember-data-tests)\n(or [Ember Mocha's `setupModelTest`](https://github.com/emberjs/ember-mocha#setup-model-tests)), you will need to specify all validators\nthat your model depends on:\n\n```javascript\nmoduleForModel('foo', 'Unit | Model | model', {\n  needs: ['validator:presence']\n});\n```"
+            "description": "## Models\n\nThe first thing we need to do is build our validation rules. This will then generate a Mixin that you will be able to incorporate into your model or object.\n\n```javascript\n// models/user.js\n\nimport Ember from 'ember';\nimport DS from 'ember-data';\nimport { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';\n\nconst Validations = buildValidations({\n  username: validator('presence', true),\n  password: [\n    validator('presence', true),\n    validator('length', {\n      min: 4,\n      max: 8\n    })\n  ],\n  email: [\n    validator('presence', true),\n    validator('format', { type: 'email' })\n  ],\n  emailConfirmation: [\n    validator('presence', true),\n    validator('confirmation', {\n      on: 'email',\n      message: '{description} do not match',\n      description: 'Email addresses'\n    })\n  ]\n});\n```\n\nOnce our rules are created and our Mixin is generated, all we have to do is add it to our model.\n\n```javascript\n// models/user.js\n\nexport default DS.Model.extend(Validations, {\n  'username': attr('string'),\n  'password': attr('string'),\n  'email': attr('string')\n});\n```\n\n## Objects\n\nYou can also use the generated `Validations` mixin on any `Ember.Object` or child\nof `Ember.Object`, like `Ember.Component`. For example:\n\n```javascript\n// components/x-foo.js\n\nimport Ember from 'ember';\nimport { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';\n\nconst Validations = buildValidations({\n  bar: validator('presence', true)\n});\n\nexport default Ember.Component.extend(Validations, {\n  bar: null\n});\n```\n\n```javascript\n// models/user.js\n\nexport default Ember.Object.extend(Validations, {\n  username: null\n});\n```\n\n## A Note on Testing & Object Containers\n\nTo lookup validators, container access is required, which can cause an issue with `Ember.Object` creation\nif the object is statically imported. The current fix for this is as follows.\n\n**Ember < 2.3.0**\n\n```javascript\n// routes/index.js\n\nimport User from '../models/user';\n\nexport default Ember.Route.extend({\n  model() {\n    const container = this.get('container');\n    return User.create({ username: 'John', container })\n  }\n});\n```\n\n**Ember >= 2.3.0**\n\n```javascript\n// routes/index.js\n\nimport User from '../models/user';\n\nexport default Ember.Route.extend({\n  model() {\n    return User.create(\n     Ember.getOwner(this).ownerInjection(),\n     { username: 'John' }\n    );\n  }\n});\n```\n\nThis also has ramifications for Ember Data model tests. When using [Ember QUnit's `moduleForModel`](https://github.com/emberjs/ember-qunit#ember-data-tests)\n(or [Ember Mocha's `setupModelTest`](https://github.com/emberjs/ember-mocha#setup-model-tests)), you will need to specify all validators\nthat your model depends on:\n\n```javascript\nmoduleForModel('foo', 'Unit | Model | model', {\n  needs: ['validator:presence']\n});\n```"
         },
         "Advanced": {
             "name": "Advanced",
@@ -473,7 +483,7 @@
             "namespace": "",
             "file": "addon/index.js",
             "line": 149,
-            "description": "### Default Options\n\nDefault options can be specified over a set of validations for a given attribute. Local properties will always take precedence.\n\nInstead of doing the following:\n\n```javascript\nconst Validations = buildValidations({\n  username: [\n    validator('presence', {\n      presence: true,\n      description: 'Username'\n    }),\n    validator('length', {\n      min: 1,\n      description: 'Username'\n    }),\n    validator('my-custom-validator', {\n      description: 'A username'\n    })\n  ]\n});\n```\n\nWe can declare default options:\n\n```javascript\nconst Validations = buildValidations({\n  username: {\n    description: 'Username'\n    validators: [\n      validator('presence', true),\n      validator('length', {\n        min: 1\n      }),\n      validator('my-custom-validator', {\n        description: 'A username'\n      })\n    ]\n  },\n});\n```\n\nIn the above example, all the validators for username will have a description of `Username` except that of the `my-custom-validator` validator which will be `A username`.\n\n### Global Options\n\nIf you have  specific options you want to propagate through all your validation rules, you can do so by passing in a global options object.\nThis is ideal for when you have a dependent key that each validator requires such as the current locale from your i18n implementation, or\nyou want easily toggle your validations on/off. As of 3.x, all dependent keys must be prefixed with `model`.\n\n```javascript\nconst Validations = buildValidations(validationRules, globalOptions);\n```\n\n```javascript\nimport Ember from 'ember';\nimport { validator, buildValidations } from 'ember-cp-validations';\n\nconst Validations = buildValidations({\n  firstName: {\n    description: 'First Name'\n    validators: [\n      validator('presence', {\n        presence: true,\n        dependentKeys: ['model.foo', 'model.bar']\n      })\n     ]\n   },\n  lastName: validator('presence', true)\n}, {\n  description: 'This field'\n  dependentKeys: ['model.i18n.locale'],\n  disabled: computed.readOnly('model.disableValidations')\n});\n```\n\nJust like in the default options, locale validator options will always take precedence over default options and default options will always take precedence\nover global options. This allows you to declare global rules while having the ability to override them in lower levels.\n\nThis rule does not apply to `dependentKeys`, instead they all are merged. In the example above, __firstName__'s dependentKeys will be\n`['model.i18n.locale', 'model.foo', 'model.bar']`\n\n### Computed Options\n\nAll options can also be Computed Properties. These CPs have access to the `model` and `attribute` that is associated with the validator.\n\nPlease note that the `message` option of a validator can also be a function with [the following signature](http://offirgolan.github.io/ember-cp-validations/docs/modules/Validators.html#message).\n\n```javascript\nconst Validations = buildValidations({\n  username: validator('length', {\n    disabled: Ember.computed.not('model.meta.username.isEnabled'),\n    min: Ember.computed.readOnly('model.meta.username.minLength'),\n    max: Ember.computed.readOnly('model.meta.username.maxLength'),\n    description: Ember.computed(function() {\n      // CPs have access to the `model` and `attribute`\n      return this.get('model').generateDescription(this.get('attribute'));\n    }).volatile() // Disable caching and force recompute on every get call\n  })\n});\n```\n\n### Nested Keys\n\nWhen declaring object validations (not including Ember Data models), it is possible to validate child objects from the parent object.\n\n```javascript\nimport Ember from 'ember';\nimport { validator, buildValidations } from 'ember-cp-validations';\n\nconst Validations = buildValidations({\n  'acceptTerms': validator('inclusion', { in: [ true ] }),\n  'user.firstName': validator('presence', true),\n  'user.lastName': validator('presence', true),\n  'user.account.number': validator('number')\n});\n\nexport default Ember.Component.extend(Validations, {\n  acceptTerms: false,\n  user:  {\n    firstName: 'John',\n    lastName: 'Doe' ,\n    account: {\n      number: 123456,\n    }\n  },\n  isFormValid: Ember.computed.alias('validations.isValid'),\n});\n```"
+            "description": "### Default Options\n\nDefault options can be specified over a set of validations for a given attribute. Local properties will always take precedence.\n\nInstead of doing the following:\n\n```javascript\nconst Validations = buildValidations({\n  username: [\n    validator('presence', {\n      presence: true,\n      description: 'Username'\n    }),\n    validator('length', {\n      min: 1,\n      description: 'Username'\n    }),\n    validator('my-custom-validator', {\n      description: 'A username'\n    })\n  ]\n});\n```\n\nWe can declare default options:\n\n```javascript\nconst Validations = buildValidations({\n  username: {\n    description: 'Username'\n    validators: [\n      validator('presence', true),\n      validator('length', {\n        min: 1\n      }),\n      validator('my-custom-validator', {\n        description: 'A username'\n      })\n    ]\n  },\n});\n```\n\nIn the above example, all the validators for username will have a description of `Username` except that of the `my-custom-validator` validator which will be `A username`.\n\n### Global Options\n\nIf you have  specific options you want to propagate through all your validation rules, you can do so by passing in a global options object.\nThis is ideal for when you have a dependent key that each validator requires such as the current locale from your i18n implementation, or\nyou want easily toggle your validations on/off. As of 3.x, all dependent keys must be prefixed with `model`.\n\n```javascript\nconst Validations = buildValidations(validationRules, globalOptions);\n```\n\n```javascript\nimport Ember from 'ember';\nimport { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';\n\nconst Validations = buildValidations({\n  firstName: {\n    description: 'First Name'\n    validators: [\n      validator('presence', {\n        presence: true,\n        dependentKeys: ['model.foo', 'model.bar']\n      })\n     ]\n   },\n  lastName: validator('presence', true)\n}, {\n  description: 'This field'\n  dependentKeys: ['model.i18n.locale'],\n  disabled: computed.readOnly('model.disableValidations')\n});\n```\n\nJust like in the default options, locale validator options will always take precedence over default options and default options will always take precedence\nover global options. This allows you to declare global rules while having the ability to override them in lower levels.\n\nThis rule does not apply to `dependentKeys`, instead they all are merged. In the example above, __firstName__'s dependentKeys will be\n`['model.i18n.locale', 'model.foo', 'model.bar']`\n\n### Computed Options\n\nAll options can also be Computed Properties. These CPs have access to the `model` and `attribute` that is associated with the validator.\n\nPlease note that the `message` option of a validator can also be a function with [the following signature](http://offirgolan.github.io/ember-cp-validations/docs/modules/Validators.html#message).\n\n```javascript\nconst Validations = buildValidations({\n  username: validator('length', {\n    disabled: Ember.computed.not('model.meta.username.isEnabled'),\n    min: Ember.computed.readOnly('model.meta.username.minLength'),\n    max: Ember.computed.readOnly('model.meta.username.maxLength'),\n    description: Ember.computed(function() {\n      // CPs have access to the `model` and `attribute`\n      return this.get('model').generateDescription(this.get('attribute'));\n    }).volatile() // Disable caching and force recompute on every get call\n  })\n});\n```\n\n### Nested Keys\n\nWhen declaring object validations (not including Ember Data models), it is possible to validate child objects from the parent object.\n\n```javascript\nimport Ember from 'ember';\nimport { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';\n\nconst Validations = buildValidations({\n  'acceptTerms': validator('inclusion', { in: [ true ] }),\n  'user.firstName': validator('presence', true),\n  'user.lastName': validator('presence', true),\n  'user.account.number': validator('number')\n});\n\nexport default Ember.Component.extend(Validations, {\n  acceptTerms: false,\n  user:  {\n    firstName: 'John',\n    lastName: 'Doe' ,\n    account: {\n      number: 123456,\n    }\n  },\n  isFormValid: Ember.computed.alias('validations.isValid'),\n});\n```"
         },
         "I18n Solutions": {
             "name": "I18n Solutions",
@@ -488,34 +498,6 @@
             "file": "addon/index.js",
             "line": 285,
             "description": "### [__Ember-Intl__](https://github.com/ember-intl/cp-validations)\n\n ```bash\n ember install @ember-intl/cp-validations\n ```\n\n### [__Ember-I18n__](https://github.com/jasonmit/ember-i18n-cp-validations)\n\n```bash\n ember install ember-i18n-cp-validations\n```"
-        },
-        "Templating": {
-            "name": "Templating",
-            "submodules": {
-                "V-Get Helper": 1
-            },
-            "elements": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {},
-            "tag": "main",
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 1,
-            "itemtype": "main"
-        },
-        "V-Get Helper": {
-            "name": "V-Get Helper",
-            "submodules": {},
-            "elements": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Templating",
-            "namespace": "",
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 6,
-            "description": "Accessing validation information in your templates is really simple but the pathing can be quite long. For example, if we want to display the error `message` for the `username` attribute, it would look something like this:\n\n```handlebars\n{{model.validations.attrs.username.message}}\n```\n\n## The V-Get Helper\nTo bypass such long pathing, you can use the `v-get` helper.\n\n_**Notice**: Ember v1.13.0 is not supported due to a bug. Please use Ember v1.13.1 and higher or Ember v1.12.* and lower_\n\n**Access global model properties**\n\n```handlebars\n{{v-get model 'isValid'}}\n```\n\n**Access attribute specific properties**\n\n```handlebars\n{{v-get model 'username' 'message'}}\n```\n\n**Access model relationship validations**\n\nSay we have a `user` model with a `details` attribute that is a belongsTo relationship, to access validations on the `details` attribute/model we can access it as such.\n\n```handlebars\n{{v-get model.details 'isValid'}}\n{{v-get model.details 'firstName' 'message'}}\n```\n\nWhat's awesome about this is that you can pass in bound properties!\n\n```handlebars\n{{v-get model attr prop}}\n{{v-get model prop}}\n```\n\nHere is a more extensive example:\n```handlebars\n<form>\n  {{input value=model.username placeholder=\"Username\"}}\n  {{#if (v-get model 'username' 'isInvalid')}}\n    <div class=\"error\">\n      {{v-get model 'username' 'message'}}\n    </div>\n  {{/if}}\n\n  <button type=\"submit\" disabled={{v-get model 'isInvalid'}}>Submit</button>\n</form>\n```"
         }
     },
     "classes": {
@@ -583,7 +565,7 @@
             "module": "Validators",
             "namespace": "",
             "file": "addon/validators/alias.js",
-            "line": 7,
+            "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nCreates an alias between a single attribute's validations to another.\nThis copies all messages, errors, etc., to the current attribute as well as\nits validation state (isValid, isValidating, etc.)\n\n## Examples\n\n```javascript\nvalidator('alias', 'attribute')\nvalidator('alias', {\n  alias: 'attribute',\n  firstMessageOnly: true\n})\n```",
             "extends": "Base"
         },
@@ -612,7 +594,7 @@
             "namespace": "",
             "file": "addon/validators/base.js",
             "line": 320,
-            "description": "Creating custom validators is very simple. To generate a validator named `unique-username` in Ember CLI\n\n```bash\nember generate validator unique-username\n```\n\nThis will create the following files\n\n* `app/validators/unique-username.js`\n* `tests/unit/validators/unique-username-test.js`\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from 'ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  validate(value, options, model, attribute) {\n    return true;\n  }\n});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\n**Side Note**: Before we continue, I would suggest checking out the documentation for the {{#crossLink 'Base'}}Base Validator{{/crossLink}}.\n\nIf you want to interact with the `store` within your validator, you can simply inject the service like you would a component.\nSince you have access to your model and the current value, you should be able to send the server the right information to determine if this username is unique.\n\n```javascript\n// app/validators/unique-username.js\n\nimport Ember from 'ember';\nimport BaseValidator from 'ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  store: Ember.inject.service(),\n\n  validate(value, options, model, attribute) {\n    return this.get('store').findRecord('user', value).then((user) => {\n      if(user && user.id === value) {\n        let message = `The username '${value}' already exists.`;\n        let meta = user.get('meta');\n\n        if(options.showSuggestions && meta && meta.suggestions) {\n          message += \"What about one of the these: \" + meta.suggestions.join(', ');\n        }\n        return message;\n      } else {\n        return true;\n      }\n    })\n  }\n});\n```\n\n## Dependent Keys\n\nThere will be times when your validator will be dependent on some other property or object. Instead of having to\ninclude them in your option's `dependentKeys`, you can declare them in the static `getDependentsFor` hook. This hook\nreceives two parameters. The first is the `attribute` that this validator is being added to, and the second are the `options`\nthere were passed to this validator.\n\nFrom the above code sample:\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from 'ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\nAll dependent keys are in reference to the model's `validations.attrs` object. So when you return `['username']`,\nit will add a dependent to `model.validations.attrs.username`. If you want to add a dependent on the model, your\nkey needs to be prefixed with `model`. So when you return `['model.username']`, it will add a dependent to `model.username` instead of `model.validations.attrs.username`.\nThis means that if you have a dependent on a service, that service must be injected into the model since returning `['model.myService.someProperty']`\nwill be interpreted as `model.myService.someProperty`.\n\n## Usage\n\nTo use our unique-username validator we just have to add it to the model definition\n\n```javascript\nconst Validations = buildValidations({\n  username: validator('unique-username', {\n    showSuggestions: true\n  }),\n});\n\nexport default DS.Model.extend(Validations, {\n  'username': DS.attr('string'),\n});\n```\n\n## Testing\nAs mentioned before, the generator created a unit test for your new custom validator.\n\n```javascript\n// tests/unit/validators/unique-username-test.js\n\nimport Ember from 'ember';\nimport { moduleFor, test } from 'ember-qunit';\n\nmoduleFor('validator:unique-username', 'Unit | Validator | unique-username', {\n    needs: ['validator:messages']\n});\n\ntest('it works', function(assert) {\n    const validator =  this.subject();\n    assert.ok(validator);\n});\n```\n\nA simple test for our validation method can be as such\n\n```javascript\ntest('username is unique', function(assert) {\n    assert.expect(1);\n\n    let validator =  this.subject();\n    let done = assert.async();\n\n    validator.validate('johndoe42').then((message) => {\n      assert.equal(message, true);\n      done();\n    });\n});\n```",
+            "description": "Creating custom validators is very simple. To generate a validator named `unique-username` in Ember CLI\n\n```bash\nember generate validator unique-username\n```\n\nThis will create the following files\n\n* `app/validators/unique-username.js`\n* `tests/unit/validators/unique-username-test.js`\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  validate(value, options, model, attribute) {\n    return true;\n  }\n});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\n**Side Note**: Before we continue, I would suggest checking out the documentation for the {{#crossLink 'Base'}}Base Validator{{/crossLink}}.\n\nIf you want to interact with the `store` within your validator, you can simply inject the service like you would a component.\nSince you have access to your model and the current value, you should be able to send the server the right information to determine if this username is unique.\n\n```javascript\n// app/validators/unique-username.js\n\nimport Ember from 'ember';\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  store: Ember.inject.service(),\n\n  validate(value, options, model, attribute) {\n    return this.get('store').findRecord('user', value).then((user) => {\n      if(user && user.id === value) {\n        let message = `The username '${value}' already exists.`;\n        let meta = user.get('meta');\n\n        if(options.showSuggestions && meta && meta.suggestions) {\n          message += \"What about one of the these: \" + meta.suggestions.join(', ');\n        }\n        return message;\n      } else {\n        return true;\n      }\n    })\n  }\n});\n```\n\n## Dependent Keys\n\nThere will be times when your validator will be dependent on some other property or object. Instead of having to\ninclude them in your option's `dependentKeys`, you can declare them in the static `getDependentsFor` hook. This hook\nreceives two parameters. The first is the `attribute` that this validator is being added to, and the second are the `options`\nthere were passed to this validator.\n\nFrom the above code sample:\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\nAll dependent keys are in reference to the model's `validations.attrs` object. So when you return `['username']`,\nit will add a dependent to `model.validations.attrs.username`. If you want to add a dependent on the model, your\nkey needs to be prefixed with `model`. So when you return `['model.username']`, it will add a dependent to `model.username` instead of `model.validations.attrs.username`.\nThis means that if you have a dependent on a service, that service must be injected into the model since returning `['model.myService.someProperty']`\nwill be interpreted as `model.myService.someProperty`.\n\n## Usage\n\nTo use our unique-username validator we just have to add it to the model definition\n\n```javascript\nconst Validations = buildValidations({\n  username: validator('unique-username', {\n    showSuggestions: true\n  }),\n});\n\nexport default DS.Model.extend(Validations, {\n  'username': DS.attr('string'),\n});\n```\n\n## Testing\nAs mentioned before, the generator created a unit test for your new custom validator.\n\n```javascript\n// tests/unit/validators/unique-username-test.js\n\nimport Ember from 'ember';\nimport { moduleFor, test } from 'ember-qunit';\n\nmoduleFor('validator:unique-username', 'Unit | Validator | unique-username', {\n    needs: ['validator:messages']\n});\n\ntest('it works', function(assert) {\n    const validator =  this.subject();\n    assert.ok(validator);\n});\n```\n\nA simple test for our validation method can be as such\n\n```javascript\ntest('username is unique', function(assert) {\n    assert.expect(1);\n\n    let validator =  this.subject();\n    let done = assert.async();\n\n    validator.validate('johndoe42').then((message) => {\n      assert.equal(message, true);\n      done();\n    });\n});\n```",
             "extends": "Base"
         },
         "Belongs To": {
@@ -640,8 +622,8 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/collection.js",
-            "line": 8,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/collection.js",
+            "line": 7,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nIf `true` validates that the given value is a valid collection and will add `<ATTRIBUTE>.[]` as a dependent key to the CP.\nIf `false`, validates that the given value is singular. Use this validator if you want validation to occur when the content of your collection changes.\n\n## Examples\n\n```javascript\nvalidator('collection', true)\nvalidator('collection', false)\nvalidator('collection', {\n  collection: true,\n  message: 'must be a collection'\n})\n```",
             "extends": "Base"
         },
@@ -655,7 +637,7 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/confirmation.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/confirmation.js",
             "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidates that the attribute has the same value as the one of the declared attribute.\n\n## Examples\n\n```javascript\nemail: validator('format', {\n  type: 'email'\n})\nverifiedEmail: validator('confirmation', {\n  on: 'email',\n  message: 'Email addresses do not match'\n})\n```",
             "extends": "Base"
@@ -670,8 +652,8 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/date.js",
-            "line": 8,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/date.js",
+            "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidate over a date range. Uses [MomentJS](http://momentjs.com/) for date mathematics and calculations.\n\n**Note**: MomentJS must be installed to be able to use this validator. The easiest way to do this is to install [ember-moment](https://github.com/stefanpenner/ember-moment)\n\n ## Examples\n\n If `before`, `onOrBefore`, `after`, or `onOrAfter` is set to **now**, the value given to the validator will be tested against the current date and time.\n\n```javascript\nvalidator('date', {\n  after: 'now',\n  before: '1/1/2020',\n  precision: 'day',\n  format: 'M/D/YYY',\n  errorFormat: 'M/D/YYY'\n})\n```",
             "extends": "Base"
         },
@@ -700,8 +682,8 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/ds-error.js",
-            "line": 8,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/ds-error.js",
+            "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nCreates a link between this library and Ember-Data's [DS.Errors](http://emberjs.com/api/data/classes/DS.Errors.html)\nto fetch the latest message for the given attribute.\n\n## Examples\n\n```javascript\nvalidator('ds-error')\n```",
             "extends": "Base"
         },
@@ -715,7 +697,7 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/exclusion.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/exclusion.js",
             "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidates that the attributes’ values are not included in a given list. All comparisons are done using strict equality so type matters! For range, the value type is checked against both lower and upper bounds for type equality.\n\n## Examples:\n\n```javascript\nvalidator('exclusion', {\n  in: ['Admin', 'Super Admin']\n})\nvalidator('exclusion', {\n  range: [0, 5] // Cannot be between 0 (inclusive) to 5 (inclusive)\n})\n```",
             "extends": "Base"
@@ -730,8 +712,8 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/format.js",
-            "line": 12,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/format.js",
+            "line": 7,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidate over a predefined or custom regular expression.\n\n## Examples\n\n```javascript\nvalidator('format', {\n  type: 'email',\n  allowNonTld: true\n})\nvalidator('format', {\n  allowBlank: true,\n  type: 'phone'\n})\nvalidator('format', {\n  type: 'url'\n})\nvalidator('format', {\n  regex: /^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$/,\n  message: 'Password must include at least one upper case letter, one lower case letter, and a number'\n})\n```\n\nIf you do not want to use the predefined regex for a specific type, you can do something like this\n\n```javascript\nvalidator('format', {\n  type: 'email',\n  regex: /My Better Email Regexp/\n})\n```\n\nThis allows you to still keep the email error message but with your own custom regex.",
             "extends": "Base"
         },
@@ -760,7 +742,7 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/inclusion.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/inclusion.js",
             "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidates that the attributes’ values are included in a given list. All comparisons are done using strict equality so type matters!\nFor range, the value type is checked against both lower and upper bounds for type equality.\n\n## Examples\n\n```javascript\nvalidator('inclusion', {\n  in: ['User', 'Admin']\n})\nvalidator('inclusion', {\n  range: [0, 5] // Must be between 0 (inclusive) to 5 (inclusive)\n})\n```\n\nBecause of the strict equality comparisons, you can use this validator in many different ways.\n\n```javascript\nvalidator('inclusion', {\n  in: ['Admin'] // Input must be equal to 'Admin'\n})\nvalidator('inclusion', {\n  range: [0, Infinity] // Input must be positive number\n})\nvalidator('inclusion', {\n  range: [-Infinity, Infinity] // Input must be a number\n})\n```",
             "extends": "Base"
@@ -790,7 +772,7 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/length.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/length.js",
             "line": 5,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidates the length of the attributes’ values.\n\n## Examples\n\n```javascript\nvalidator('length', {\n  is: 15\n})\nvalidator('length', {\n  min: 5,\n  max: 10\n})\n```",
             "extends": "Base"
@@ -805,9 +787,9 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 4,
-            "description": "The default validation error messages are imported in your app's `validators` folder.\nIf you want to change or extend them, all you need to do is create a `messages.js` file under `app/validators`.\n\n```javascript\n// app/validators/messages.js\n\nimport Messages from 'ember-cp-validations/validators/messages';\n\nexport default Messages.extend({\n  uniqueUsername: '{description} {username} already exists'\n});\n```\n\nWithin this object, you can overwrite the [default messages](https://github.com/offirgolan/ember-cp-validations/blob/master/addon/validators/messages.js) or create new messages just like in the example above.\nIf a message of a given type is not found, it will default to the `invalid` message.\nUsage examples can be found {{#crossLink \"Base/createErrorMessage:method\"}}here{{/crossLink}}"
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 3,
+            "description": "The default validation error messages are imported in your app's `validators` folder.\nIf you want to change or extend them, all you need to do is create a `messages.js` file under `app/validators`.\n\n```javascript\n// app/validators/messages.js\n\nimport Messages from '@summit-electric-supply/ember-cp-validations/validators/messages';\n\nexport default Messages.extend({\n  uniqueUsername: '{description} {username} already exists'\n});\n```\n\nWithin this object, you can overwrite the [default messages](https://github.com/offirgolan/ember-cp-validations/blob/master/addon/validators/messages.js) or create new messages just like in the example above.\nIf a message of a given type is not found, it will default to the `invalid` message.\nUsage examples can be found {{#crossLink \"Base/createErrorMessage:method\"}}here{{/crossLink}}"
         },
         "Number": {
             "name": "Number",
@@ -819,7 +801,7 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/number.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/number.js",
             "line": 5,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidates that your attributes have only numeric values.\n\n## Examples\n\n```javascript\nvalidator('number') // Simple check if the value is a number\nvalidator('number', {\n  allowString: true,\n  integer: true,\n  gt: 5,\n  lte: 100\n})\n```",
             "extends": "Base"
@@ -834,10 +816,21 @@
             "extension_for": [],
             "module": "Validators",
             "namespace": "",
-            "file": "node_modules/ember-validators/addon/presence.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/presence.js",
             "line": 7,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nIf `true` validates that the given value is not empty, if `false`, validates that the given value is empty.\n\n## Examples\n\n```javascript\nvalidator('presence', true)\nvalidator('presence', false)\nvalidator('presence', {\n  presence: true,\n  message: 'should not be empty'\n})\n\nvalidator('presence', {\n  presence: true,\n  ignoreBlank: true,\n  message: 'should not be empty or consist only of spaces'\n})\n```",
             "extends": "Base"
+        },
+        "Ember": {
+            "name": "Ember",
+            "shortname": "Ember",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Usage",
+            "namespace": ""
         }
     },
     "elements": {},
@@ -1102,6 +1095,24 @@
             "access": "private",
             "tagname": "",
             "class": "Result",
+            "module": "Validations"
+        },
+        {
+            "file": "addon/helpers/v-get.js",
+            "line": 4,
+            "description": "Transform:\n (v-get model 'username' 'isValid') to (get (get (get (get model 'validations') 'attrs') 'username') 'isValid')\nOR\n (v-get model 'isValid') to (get (get model 'validations') 'isValid')",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "",
+                    "type": "AST.Node"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "AST.Node"
+            },
+            "class": "Error",
             "module": "Validations"
         },
         {
@@ -1938,7 +1949,7 @@
         },
         {
             "file": "addon/validators/alias.js",
-            "line": 29,
+            "line": 28,
             "description": "Normalized options passed in.\n```js\nvalidator('alias', 'attribute')\n// Becomes\nvalidator('alias', {\n  alias: 'attribute'\n})\n```",
             "itemtype": "method",
             "name": "buildOptions",
@@ -1968,7 +1979,7 @@
         },
         {
             "file": "addon/validators/alias.js",
-            "line": 56,
+            "line": 55,
             "itemtype": "method",
             "name": "validate",
             "params": [
@@ -2413,72 +2424,33 @@
             "module": "Validators"
         },
         {
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 105,
-            "description": "{{#if (v-get model 'username' 'isValid')}} {{/if}}",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/utils/can-invoke.js",
+            "line": 1,
+            "description": "Checks to see if the `methodName` exists on the `obj`.\n```javascript\nlet foo = { bar: function() { return 'bar'; }, baz: null };\nEmber.canInvoke(foo, 'bar'); // true\nEmber.canInvoke(foo, 'baz'); // false\nEmber.canInvoke(foo, 'bat'); // false\n```",
+            "itemtype": "method",
+            "name": "canInvoke",
             "params": [
                 {
-                    "name": "node",
-                    "description": "",
-                    "type": "AST.Node"
-                }
-            ],
-            "class": "Collection",
-            "module": "Templating",
-            "submodule": "V-Get Helper"
-        },
-        {
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 124,
-            "description": "{{x-component prop=(v-get model 'isValid')}}",
-            "params": [
+                    "name": "obj",
+                    "description": "The object to check for the method",
+                    "type": "Object"
+                },
                 {
-                    "name": "node",
-                    "description": "",
-                    "type": "AST.Node"
-                }
-            ],
-            "class": "Collection",
-            "module": "Templating",
-            "submodule": "V-Get Helper"
-        },
-        {
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 143,
-            "description": "<button type=\"submit\" disabled={{v-get model 'isInvalid'}}>Submit</button> (node.attributes)\n<div class=\"form-group {{if (v-get model 'isInvalid') 'has-error'}}\">",
-            "params": [
-                {
-                    "name": "node",
-                    "description": "",
-                    "type": "AST.Node"
-                }
-            ],
-            "class": "Collection",
-            "module": "Templating",
-            "submodule": "V-Get Helper"
-        },
-        {
-            "file": "htmlbars-plugins/v-get.js",
-            "line": 164,
-            "description": "Transform:\n (v-get model 'username' 'isValid') to (get (get (get (get model 'validations') 'attrs') 'username') 'isValid')\nOR\n (v-get model 'isValid') to (get (get model 'validations') 'isValid')",
-            "params": [
-                {
-                    "name": "node",
-                    "description": "",
-                    "type": "AST.Node"
+                    "name": "methodName",
+                    "description": "The method name to check for",
+                    "type": "String"
                 }
             ],
             "return": {
                 "description": "",
-                "type": "AST.Node"
+                "type": "Boolean"
             },
-            "class": "Collection",
-            "module": "Templating",
-            "submodule": "V-Get Helper"
+            "class": "Ember",
+            "module": "Usage"
         },
         {
-            "file": "node_modules/ember-validators/addon/collection.js",
-            "line": 13,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/collection.js",
+            "line": 12,
             "itemtype": "method",
             "name": "validate",
             "params": [
@@ -2514,7 +2486,7 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/confirmation.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/confirmation.js",
             "line": 11,
             "itemtype": "method",
             "name": "validate",
@@ -2556,8 +2528,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/date.js",
-            "line": 13,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/date.js",
+            "line": 11,
             "itemtype": "method",
             "name": "validate",
             "params": [
@@ -2628,8 +2600,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/ds-error.js",
-            "line": 13,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/ds-error.js",
+            "line": 11,
             "itemtype": "method",
             "name": "validate",
             "params": [
@@ -2658,7 +2630,7 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/exclusion.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/exclusion.js",
             "line": 11,
             "itemtype": "method",
             "name": "validate",
@@ -2705,8 +2677,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/format.js",
-            "line": 17,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/format.js",
+            "line": 12,
             "itemtype": "method",
             "name": "validate",
             "params": [
@@ -2767,7 +2739,7 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/inclusion.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/inclusion.js",
             "line": 11,
             "itemtype": "method",
             "name": "validate",
@@ -2814,7 +2786,7 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/length.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/length.js",
             "line": 10,
             "itemtype": "method",
             "name": "validate",
@@ -2876,8 +2848,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 9,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 8,
             "description": "Regex for matching error message placeholders",
             "access": "private",
             "tagname": "",
@@ -2888,8 +2860,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 17,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 16,
             "description": "Default attribute description if one isnt passed into a validator's options",
             "itemtype": "property",
             "name": "defaultDescription",
@@ -2898,8 +2870,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 24,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 23,
             "description": "Get a description for a specific attribute. This is a hook\nfor i18n solutions to retrieve attribute descriptions from a translation",
             "itemtype": "method",
             "name": "getDescriptionFor",
@@ -2923,8 +2895,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 36,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 35,
             "description": "Get a message with a given type",
             "itemtype": "method",
             "name": "getMessageFor",
@@ -2948,8 +2920,8 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 47,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 46,
             "description": "Regex replace all placeholders with their given context",
             "itemtype": "method",
             "name": "formatMessage",
@@ -2973,14 +2945,14 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/messages.js",
-            "line": 63,
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/messages.js",
+            "line": 62,
             "description": "Default validation error message strings",
             "class": "Messages",
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/number.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/number.js",
             "line": 10,
             "itemtype": "method",
             "name": "validate",
@@ -3077,7 +3049,7 @@
             "module": "Validators"
         },
         {
-            "file": "node_modules/ember-validators/addon/presence.js",
+            "file": "node_modules/@summit-electric-supply/ember-validators/addon/presence.js",
             "line": 12,
             "itemtype": "method",
             "name": "validate",
@@ -3125,6 +3097,10 @@
             "line": " addon/validations/factory.js:448"
         },
         {
+            "message": "Missing item type\nTransform:\n (v-get model 'username' 'isValid') to (get (get (get (get model 'validations') 'attrs') 'username') 'isValid')\nOR\n (v-get model 'isValid') to (get (get model 'validations') 'isValid')",
+            "line": " addon/helpers/v-get.js:4"
+        },
+        {
             "message": "Missing item type\nUse Ember Meta to break cycles in the CP chains. Lets say we have a User model with a `friends` property that is a hasMany\nrelationship. If we have a user John and he has a friend Jane, that creates a two-way relationship. John is Jane's friends and vise\nversa. If we were to go down the CP chain and get validations for John's friends, it would go to Jane, then to Jane's friends, which\nwould point back to John. This method tracks which models have been already visited and breaks the cycle.",
             "line": " addon/utils/cycle-breaker.js:1"
         },
@@ -3145,24 +3121,8 @@
             "line": " addon/validations/result-collection.js:386"
         },
         {
-            "message": "Missing item type\n{{#if (v-get model 'username' 'isValid')}} {{/if}}",
-            "line": " htmlbars-plugins/v-get.js:105"
-        },
-        {
-            "message": "Missing item type\n{{x-component prop=(v-get model 'isValid')}}",
-            "line": " htmlbars-plugins/v-get.js:124"
-        },
-        {
-            "message": "Missing item type\n<button type=\"submit\" disabled={{v-get model 'isInvalid'}}>Submit</button> (node.attributes)\n<div class=\"form-group {{if (v-get model 'isInvalid') 'has-error'}}\">",
-            "line": " htmlbars-plugins/v-get.js:143"
-        },
-        {
-            "message": "Missing item type\nTransform:\n (v-get model 'username' 'isValid') to (get (get (get (get model 'validations') 'attrs') 'username') 'isValid')\nOR\n (v-get model 'isValid') to (get (get model 'validations') 'isValid')",
-            "line": " htmlbars-plugins/v-get.js:164"
-        },
-        {
             "message": "Missing item type\nDefault validation error message strings",
-            "line": " node_modules/ember-validators/addon/messages.js:63"
+            "line": " node_modules/@summit-electric-supply/ember-validators/addon/messages.js:62"
         }
     ]
 }
