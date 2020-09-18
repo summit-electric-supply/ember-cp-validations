@@ -1,19 +1,19 @@
-import { not, readOnly, alias } from '@ember/object/computed';
-import Controller from '@ember/controller';
-import Mixin from '@ember/object/mixin';
 import { A, isArray } from '@ember/array';
-import { Promise as EmberPromise } from 'rsvp';
+import { ATTRS_MODEL } from '@summit-electric-supply/ember-cp-validations/-private/symbols';
 import { isNone } from '@ember/utils';
-import { run } from '@ember/runloop';
-import EmberObject, { computed } from '@ember/object';
-import setupObject from '../../helpers/setup-object';
-import DefaultMessages from 'dummy/validators/messages';
-import PresenceValidator from 'dummy/validators/presence';
-import LengthValidator from 'dummy/validators/length';
-import { validator, buildValidations } from 'ember-cp-validations';
 import { module, test, skip } from 'qunit';
+import { not, readOnly, alias } from '@ember/object/computed';
+import { Promise as EmberPromise } from 'rsvp';
+import { run } from '@ember/runloop';
 import { setupTest } from 'ember-qunit';
-import { ATTRS_MODEL } from 'ember-cp-validations/-private/symbols';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
+import Controller from '@ember/controller';
+import DefaultMessages from 'dummy/validators/messages';
+import EmberObject, { computed } from '@ember/object';
+import LengthValidator from 'dummy/validators/length';
+import Mixin from '@ember/object/mixin';
+import PresenceValidator from 'dummy/validators/presence';
+import setupObject from '../../helpers/setup-object';
 
 const Validators = {
   presence(value, options, model, attr) {

@@ -1,0 +1,33 @@
+{{! template-lint-disable }}
+{{!-- BEGIN-SNIPPET validated-input --}}
+{{#let (if this.showErrorClass "has-error" "")
+       (if this.isValid "has-success" "") as |errorClass validClass|}}
+  <div class="form-group {{errorClass}} validated-input">
+    <input type="{{@type}}"
+           value="{{this.value}}"
+           placeholder="{{@placeholder}}"
+           class="form-control {{errorClass}} {{validClass}}"
+           name="{{@valuePath}}"
+           ...attributes
+           {{on "input" this.onInput}}>
+
+    {{#if this.isValid}}
+      <span class="valid-input fa fa-check"></span>
+    {{/if}}
+
+    <div class="input-error">
+      {{#if this.showErrorMessage}}
+        <div class="error">
+          {{v-get @model @valuePath "message"}}
+        </div>
+      {{/if}}
+
+      {{#if this.showWarningMessage}}
+        <div class="warning">
+          {{v-get @model @valuePath "warningMessage"}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+{{/let}}
+{{!-- END-SNIPPET --}}

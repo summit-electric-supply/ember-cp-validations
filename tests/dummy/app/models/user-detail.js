@@ -1,11 +1,7 @@
 // BEGIN-SNIPPET user-detail-model
-import { computed } from '@ember/object';
-
-import DS from 'ember-data';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
+import Model, { attr } from '@ember-data/model';
 import moment from 'moment';
-import { validator, buildValidations } from 'ember-cp-validations';
-
-const { attr } = DS;
 
 const Validations = buildValidations(
   {
@@ -17,11 +13,7 @@ const Validations = buildValidations(
         validator('presence', true),
         validator('date', {
           before: 'now',
-          after: computed(function() {
-            return moment()
-              .subtract(120, 'years')
-              .format('M/D/YYYY');
-          }).volatile(),
+          after: moment().subtract(120, 'years').format('M/D/YYYY'),
           format: 'M/D/YYYY',
           message(type, value /*, context */) {
             if (type === 'before') {
@@ -55,11 +47,11 @@ const Validations = buildValidations(
   }
 );
 
-export default DS.Model.extend(Validations, {
-  firstName: attr('string'),
-  lastName: attr('string'),
-  dob: attr('date'),
-  phone: attr('string'),
-  url: attr('string')
-});
+export default class UserDetailModel extends Model.extend(Validations) {
+  @attr('date') dob;
+  @attr('string') firstName;
+  @attr('string') lastName;
+  @attr('string') phone;
+  @attr('string') url;
+}
 // END-SNIPPET

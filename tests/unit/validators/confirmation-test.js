@@ -1,6 +1,6 @@
-import EmberObject from '@ember/object';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import EmberObject from '@ember/object';
 
 let model, options, builtOptions, validator, message;
 

@@ -1,19 +1,14 @@
-import ArrayProxy from '@ember/array/proxy';
-import ObjectProxy from '@ember/object/proxy';
+export { getDependentKeys, isDescriptor } from '../-private/ember-internals';
+import { A as emberArray, isArray } from '@ember/array';
 import { assign } from '@ember/polyfills';
 import { isHTMLSafe } from '@ember/string';
-import EmberObject, { get } from '@ember/object';
+import { ManyArray, PromiseManyArray } from '@ember-data/model/-private';
 import { typeOf } from '@ember/utils';
-import { A as emberArray, isArray } from '@ember/array';
-
-import Ember from 'ember';
-import requireModule from 'ember-require-module';
-
-const DS = requireModule('ember-data');
-
-const { canInvoke } = Ember;
-
-export { getDependentKeys, isDescriptor } from '../-private/ember-internals';
+import ArrayProxy from '@ember/array/proxy';
+import canInvoke from '@summit-electric-supply/ember-validators/utils/can-invoke'
+import EmberObject, { get } from '@ember/object';
+import ObjectProxy from '@ember/object/proxy';
+import Model from '@ember-data/model';
 
 export function unwrapString(s) {
   if (isHTMLSafe(s)) {
@@ -36,15 +31,14 @@ export function isPromise(p) {
 }
 
 export function isDsModel(o) {
-  return !!(DS && o && o instanceof DS.Model);
+  return !!(o && o instanceof Model);
 }
 
 export function isDSManyArray(o) {
   return !!(
-    DS &&
     o &&
     isArray(o) &&
-    (o instanceof DS.PromiseManyArray || o instanceof DS.ManyArray)
+    (o instanceof PromiseManyArray || o instanceof ManyArray)
   );
 }
 

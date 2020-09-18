@@ -1,1 +1,1 @@
-export { default } from 'ember-cp-validations/validators/ds-error';
+export { default } from '@summit-electric-supply/ember-cp-validations/validators/ds-error';

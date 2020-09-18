@@ -1,6 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import { Promise } from 'rsvp';
-import EmberObject, { getWithDefault, computed, set, get } from '@ember/object';
+import EmberObject, { computed, set, get } from '@ember/object';
 import { A as emberArray, makeArray, isArray } from '@ember/array';
 import { readOnly } from '@ember/object/computed';
 import { assign } from '@ember/polyfills';
@@ -497,10 +497,10 @@ function generateValidationResultsFor(
 
   return validators.map(validator => {
     let options = get(validator, 'options').toObject();
-    let isWarning = getWithDefault(options, 'isWarning', false);
-    let disabled = getWithDefault(options, 'disabled', false);
-    let debounce = getWithDefault(options, 'debounce', 0);
-    let lazy = getWithDefault(options, 'lazy', true);
+    let isWarning = get(options, 'isWarning') ?? false;
+    let disabled = get(options, 'disabled') ?? false;
+    let debounce = get(options, 'debounce') ?? 0;
+    let lazy = get(options, 'lazy') ?? true;
 
     if (disabled || (lazy && isInvalid) || !isModelValidatable) {
       value = true;
@@ -614,9 +614,9 @@ function getCPDependentKeysFor(attribute, model, validations) {
       ...dependents,
 
       // Get all explicitly defined dependents
-      ...getWithDefault(options, 'dependentKeys', []),
-      ...getWithDefault(validation, 'defaultOptions.dependentKeys', []),
-      ...getWithDefault(validation, 'globalOptions.dependentKeys', []),
+      ...get(options, 'dependentKeys') ?? [],
+      ...get(validation, 'defaultOptions.dependentKeys') ?? [],
+      ...get(validation, 'globalOptions.dependentKeys') ?? [],
 
       // Extract implicit dependents from CPs
       ...extractOptionsDependentKeys(options),

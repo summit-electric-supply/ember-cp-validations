@@ -1,9 +1,9 @@
-import EmberObject, { computed, set, get } from '@ember/object';
 import { and, not, readOnly } from '@ember/object/computed';
 import { isNone } from '@ember/utils';
-import { makeArray } from '@ember/array';
-import ValidationError from '../validations/error';
 import { isPromise } from '../utils/utils';
+import { makeArray } from '@ember/array';
+import EmberObject, { computed, set, get } from '@ember/object';
+import ValidationError from '../validations/error';
 
 export default EmberObject.extend({
   model: null,

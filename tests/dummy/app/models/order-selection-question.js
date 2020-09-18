@@ -1,5 +1,5 @@
-import DS from 'ember-data';
-import { validator, buildValidations } from 'ember-cp-validations';
+import Model, { attr, belongsTo } from '@ember-data/model';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
 
 const Validations = buildValidations(
   {
@@ -21,8 +21,9 @@ const Validations = buildValidations(
   }
 );
 
-export default DS.Model.extend(Validations, {
-  order: DS.belongsTo('order', { async: true }),
-  selection: DS.belongsTo('order-selection', { async: true }),
-  text: DS.attr('string')
-});
+export default class OrderSelectionQuestionModel extends Model.extend(Validations) {
+  @attr('string') text;
+
+  @belongsTo('order') order;
+  @belongsTo('order-selection') selection;
+}

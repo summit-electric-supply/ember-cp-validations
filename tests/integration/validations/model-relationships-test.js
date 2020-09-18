@@ -1,18 +1,18 @@
-import { Promise as EmberPromise } from 'rsvp';
-import ArrayProxy from '@ember/array/proxy';
-import EmberObject from '@ember/object';
-import { isNone } from '@ember/utils';
 import { A as emberArray } from '@ember/array';
-import DS from 'ember-data';
-import setupObject from '../../helpers/setup-object';
-import DefaultMessages from 'dummy/validators/messages';
-import BelongsToValidator from 'ember-cp-validations/validators/belongs-to';
-import HasManyValidator from 'ember-cp-validations/validators/has-many';
-import AliasValidator from 'ember-cp-validations/validators/alias';
-import PresenceValidator from 'ember-cp-validations/validators/presence';
-import { validator, buildValidations } from 'ember-cp-validations';
+import { isNone } from '@ember/utils';
 import { module, test } from 'qunit';
+import { Promise as EmberPromise } from 'rsvp';
+import { PromiseArray, PromiseObject } from '@ember-data/store/-private';
 import { setupTest } from 'ember-qunit';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
+import AliasValidator from '@summit-electric-supply/ember-cp-validations/validators/alias';
+import ArrayProxy from '@ember/array/proxy';
+import BelongsToValidator from '@summit-electric-supply/ember-cp-validations/validators/belongs-to';
+import DefaultMessages from 'dummy/validators/messages';
+import EmberObject from '@ember/object';
+import HasManyValidator from '@summit-electric-supply/ember-cp-validations/validators/has-many';
+import PresenceValidator from '@summit-electric-supply/ember-cp-validations/validators/presence';
+import setupObject from '../../helpers/setup-object';
 
 const Validators = {
   presence(value, options, model, attr) {
@@ -526,7 +526,7 @@ module('Integration | Validations | Model Relationships', function(hooks) {
     assert.equal(user.get('validations.attrs.fullName.isValid'), true);
   });
 
-  test('presence on empty DS.PromiseObject', function(assert) {
+  test('presence on empty PromiseObject', function(assert) {
     this.owner.register('validator:presence', PresenceValidator);
 
     let Validations = buildValidations({
@@ -534,7 +534,7 @@ module('Integration | Validations | Model Relationships', function(hooks) {
     });
 
     let user = setupObject(this, EmberObject.extend(Validations), {
-      friend: DS.PromiseObject.create()
+      friend: PromiseObject.create()
     });
 
     let { validations, model } = user.get('validations').validateSync();
@@ -554,7 +554,7 @@ module('Integration | Validations | Model Relationships', function(hooks) {
     assert.equal(friend.get('message'), "This field can't be blank");
   });
 
-  test('presence on empty DS.PromiseArray', function(assert) {
+  test('presence on empty PromiseArray', function(assert) {
     this.owner.register('validator:presence', PresenceValidator);
 
     let Validations = buildValidations({
@@ -562,7 +562,7 @@ module('Integration | Validations | Model Relationships', function(hooks) {
     });
 
     let user = setupObject(this, EmberObject.extend(Validations), {
-      friends: DS.PromiseArray.create()
+      friends: PromiseArray.create()
     });
 
     let { validations, model } = user.get('validations').validateSync();

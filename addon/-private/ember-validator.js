@@ -1,5 +1,5 @@
-import Base from 'ember-cp-validations/validators/base';
-import { validate as _validate } from 'ember-validators';
+import Base from '@summit-electric-supply/ember-cp-validations/validators/base';
+import { validate as _validate } from '@summit-electric-supply/ember-validators';
 
 export default Base.extend({
   validate() {

@@ -1,21 +1,32 @@
+'use strict';
+
 module.exports = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'module'
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
-  plugins: ['ember'],
+  plugins: [
+    'ember'
+  ],
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:ember/recommended'
   ],
   env: {
     browser: true
   },
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true }]
+    'ember/no-arrow-function-computed-properties': 'off',
+    'ember/no-get': 'off',
+    'ember/no-new-mixins': 'off',
+    'ember/no-volatile-computed-properties': 'off',
+    'ember/require-computed-property-dependencies': 'off',
+    'ember/require-return-from-computed': 'off'
   },
   overrides: [
     // node files
@@ -37,21 +48,14 @@ module.exports = {
         'tests/dummy/app/**'
       ],
       parserOptions: {
-        sourceType: 'script',
-        ecmaVersion: 2015
+        sourceType: 'script'
       },
       env: {
         browser: false,
         node: true
       },
       plugins: ['node'],
-      rules: Object.assign(
-        {},
-        require('eslint-plugin-node').configs.recommended.rules,
-        {
-          // add your custom rules and overrides for node files here
-        }
-      )
+      extends: ['plugin:node/recommended']
     }
   ]
 };

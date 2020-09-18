@@ -1,13 +1,13 @@
 import { A } from '@ember/array';
-import EmberObject from '@ember/object';
-import DS from 'ember-data';
-import setupObject from '../../helpers/setup-object';
-import CollectionValidator from 'dummy/validators/collection';
-import LengthValidator from 'dummy/validators/length';
-import DSErrorValidator from 'dummy/validators/ds-error';
-import { validator, buildValidations } from 'ember-cp-validations';
+import { Errors } from '@ember-data/model/-private';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
+import CollectionValidator from 'dummy/validators/collection';
+import DSErrorValidator from 'dummy/validators/ds-error';
+import EmberObject from '@ember/object';
+import LengthValidator from 'dummy/validators/length';
+import setupObject from '../../helpers/setup-object';
 
 module('Integration | Validations | Factory - Dependent Keys', function(hooks) {
   setupTest(hooks);
@@ -48,7 +48,7 @@ module('Integration | Validations | Factory - Dependent Keys', function(hooks) {
       username: validator('ds-error')
     });
     let obj = setupObject(this, EmberObject.extend(DSErrorValidations), {
-      errors: DS.Errors.create(),
+      errors: Errors.create(),
       username: ''
     });
 
@@ -73,7 +73,7 @@ module('Integration | Validations | Factory - Dependent Keys', function(hooks) {
 
     let obj = setupObject(this, EmberObject.extend(DSErrorValidations), {
       model: EmberObject.create({
-        errors: DS.Errors.create(),
+        errors: Errors.create(),
         username: ''
       })
     });

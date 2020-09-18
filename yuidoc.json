@@ -1,12 +1,12 @@
 {
   "name": "Ember CP Validations",
   "description": "Ember computed property based validations",
-  "url": "https://github.com/offirgolan/ember-cp-validations",
+  "url": "https://github.com/summit-electric-supply/ember-cp-validations",
   "indexModule": "Usage",
   "externalDocs": [{
-      "name": "ember-validators",
-      "path": "node_modules/ember-validators",
-      "url": "https://github.com/offirgolan/ember-validators",
+      "name": "@summit-electric-supply/ember-validators",
+      "path": "node_modules/@summit-electric-supply/ember-validators",
+      "url": "https://github.com/summit-electric-supply/ember-validators",
       "version": "master"
   }],
   "options": {
@@ -15,12 +15,12 @@
       "app",
       "addon",
       "htmlbars-plugins",
-      "node_modules/ember-validators/addon"
+      "node_modules/@summit-electric-supply/ember-validators/addon"
     ],
     "external": {
       "data": [{
-        "base": "http://emberjs.com/api/",
-        "json": "http://builds.emberjs.com/tags/v2.8.0/ember-docs.json"
+        "base": "https://api.emberjs.com/ember/release/",
+        "json": "https://unpkg.com/ember-source@3.21.1/docs/data.json"
       }]
     },
     "themedir": "node_modules/yuidoc-ember-theme",

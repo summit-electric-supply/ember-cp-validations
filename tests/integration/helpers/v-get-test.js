@@ -108,12 +108,10 @@ module('Integration | Helper | v-get', function(hooks) {
   test('access validations with named args', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{named-v-get model=model field='isValid'}}`);
+    await render(hbs`<NamedVGet @model={{model}} @field="isValid" />`);
     assert.dom(this.element).hasText('false');
 
-    await render(
-      hbs`{{named-v-get model=model attr='username' field='isValid'}}`
-    );
+    await render(hbs`<NamedVGet @model={{model}} @attr="username" @field="isValid" />`);
     assert.dom(this.element).hasText('false');
   });
 });

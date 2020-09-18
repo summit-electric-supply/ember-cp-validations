@@ -1,5 +1,5 @@
 import EmberObject from '@ember/object';
-import Messages from 'ember-validators/messages';
+import Messages from '@summit-electric-supply/ember-validators/messages';
 
 /**
  *  The default validation error messages are imported in your app's `validators` folder.
@@ -8,7 +8,7 @@ import Messages from 'ember-validators/messages';
  *  ```javascript
  *  // app/validators/messages.js
  *
- *  import Messages from 'ember-cp-validations/validators/messages';
+ *  import Messages from '@summit-electric-supply/ember-cp-validations/validators/messages';
  *
  *  export default Messages.extend({
  *    uniqueUsername: '{description} {username} already exists'

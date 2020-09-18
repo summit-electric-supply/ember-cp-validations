@@ -1,5 +1,5 @@
-import DS from 'ember-data';
-import { validator, buildValidations } from 'ember-cp-validations';
+import Model, { attr } from '@ember-data/model';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
 
 let Validations = buildValidations({
   name: validator('presence', true),
@@ -10,7 +10,7 @@ let Validations = buildValidations({
   })
 });
 
-export default DS.Model.extend(Validations, {
-  name: DS.attr('string', { defaultValue: '' }),
-  acceptTerms: DS.attr('boolean', { defaultValue: false })
-});
+export default class SignupModel extends Model.extend(Validations) {
+  @attr('boolean', { defaultValue: false }) acceptTerms;
+  @attr('string', { defaultValue: '' }) name;
+}

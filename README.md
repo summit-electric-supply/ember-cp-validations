@@ -1,11 +1,16 @@
 # Ember CP Validations
 
-[![Build Status](https://travis-ci.org/offirgolan/ember-cp-validations.svg?branch=master)](https://travis-ci.org/offirgolan/ember-cp-validations)
-[![npm version](https://badge.fury.io/js/ember-cp-validations.svg)](http://badge.fury.io/js/ember-cp-validations)
-[![Download Total](https://img.shields.io/npm/dt/ember-cp-validations.svg)](http://badge.fury.io/js/ember-cp-validations)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-cp-validations.svg)](http://emberobserver.com/addons/ember-cp-validations)
+[![build](https://img.shields.io/github/workflow/status/summit-electric-supply/ember-cp-validations/CI)](https://github.com/summit-electric-supply/ember-cp-validations/actions?query=workflow%3ACI)
+[![npm](https://img.shields.io/npm/v/@summit-electric-supply/ember-cp-validations)](https://www.npmjs.com/package/@summit-electric-supply/ember-cp-validations)
 
-An EmberJS validation framework that is completely and utterly computed property based.
+An EmberJS validation framework that is completely and utterly computed property based,
+forked from [ember-cp-validators](https://github.com/offirgolan/ember-cp-validations).
+
+## Compatibility
+
+* Ember.js v3.16 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
 ## Features
 
@@ -32,7 +37,7 @@ You can also learn more by watching this Global Ember Meetup talk:
 ## Installation
 
 ```shell
-ember install ember-cp-validations
+ember install @summit-electric-supply/ember-cp-validations
 ```
 
 ## Upgrading to 4.x
@@ -41,11 +46,12 @@ If you are upgrading from 3.x to 4.x, please checkout the [upgrading documentati
 
 ## Helpful Links
 
-- ### [Live Demo](http://offirgolan.github.io/ember-cp-validations)
+- ### [Live Demo](http://summit-electric-supply.github.io/ember-cp-validations)
 
 - ### Documentation
 
-  - [4.x](http://offirgolan.github.io/ember-cp-validations/docs)
+  - [4.1](http://summit-electric-supply.github.io/ember-cp-validations/docs)
+  - [4.0](http://offirgolan.github.io/ember-cp-validations/docs)
   - [3.x](https://rawgit.com/offirgolan/ember-cp-validations/c4123c983e54f24dd790ffa1bad66cfdf2f47ec6/docs/index.html)
 
 - ### [Changelog](CHANGELOG.md)

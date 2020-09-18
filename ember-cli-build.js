@@ -8,8 +8,7 @@ module.exports = function(defaults) {
     snippetPaths: ['snippets', 'tests/dummy/snippets'],
 
     'ember-bootstrap': {
-      bootstrapVersion: 3,
-      importBootstrapFont: true,
+      bootstrapVersion: 4,
       importBootstrapCSS: false
     }
   });

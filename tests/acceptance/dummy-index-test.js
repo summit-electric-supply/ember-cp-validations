@@ -48,15 +48,14 @@ module('Acceptance | Dummy | index', function(hooks) {
 
     for (let key in validInputValues) {
       const selector = `[data-test-${dasherize(key)}]`;
-      const input = find(`${selector} input`);
+      const input = find(selector);
 
-      assert.ok(input, `${selector} found`);
+      assert.ok(input, `input ${selector} found`);
       await fillIn(input, validInputValues[key]);
       assert.dom(selector).hasClass('has-success');
     }
 
     await click('[data-test-sign-up]');
-    // assert.dom('[data-test-tomster]').exists();
     assert.dom('.form .registered .icon-success').exists();
     assert.dom('.form .registered h2.success').hasText('Success');
   });
@@ -65,14 +64,16 @@ module('Acceptance | Dummy | index', function(hooks) {
     assert.expect(4);
     await visit('/');
 
-    const input = find('[data-test-email] input');
+    const input = find('[data-test-email]');
+    const parent = input.parentElement;
+    const inputError = parent.querySelector('.input-error')
 
     assert.ok(input);
     await fillIn(input, 'invalid-email');
 
-    assert.dom('[data-test-email]').hasClass('has-error');
+    assert.dom(parent).hasClass('has-error');
     assert
-      .dom('[data-test-email] .input-error')
+      .dom(inputError)
       .hasText('This field must be a valid email address');
 
     await fillIn(input, validInputValues.email);

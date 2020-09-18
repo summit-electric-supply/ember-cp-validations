@@ -1,4 +1,4 @@
-import BaseValidator from 'ember-cp-validations/validators/base';
+import BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';
 
 const <%= classifiedModuleName %> = BaseValidator.extend({
   validate(/*value, options, model, attribute*/) {

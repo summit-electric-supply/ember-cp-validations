@@ -1,1 +1,1 @@
-export { default } from 'ember-cp-validations/validators/exclusion';
+export { default } from '@summit-electric-supply/ember-cp-validations/validators/exclusion';

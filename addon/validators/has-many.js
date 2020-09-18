@@ -1,5 +1,5 @@
-import Base from 'ember-cp-validations/validators/base';
-import { isPromise } from 'ember-cp-validations/utils/utils';
+import Base from '@summit-electric-supply/ember-cp-validations/validators/base';
+import { isPromise } from '@summit-electric-supply/ember-cp-validations/utils/utils';
 import { get } from '@ember/object';
 
 /**

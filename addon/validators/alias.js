@@ -1,8 +1,7 @@
 import { assert } from '@ember/debug';
-
-import { isPresent } from '@ember/utils';
 import { getProperties, get } from '@ember/object';
-import Base from 'ember-cp-validations/validators/base';
+import { isPresent } from '@ember/utils';
+import Base from '@summit-electric-supply/ember-cp-validations/validators/base';
 
 /**
  *  <i class="fa fa-hand-o-right" aria-hidden="true"></i> [See All Options](#method_validate)

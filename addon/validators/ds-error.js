@@ -1,5 +1,5 @@
-import EmberValidator from 'ember-cp-validations/-private/ember-validator';
-import { getPathAndKey } from 'ember-validators/ds-error';
+import EmberValidator from '@summit-electric-supply/ember-cp-validations/-private/ember-validator';
+import { getPathAndKey } from '@summit-electric-supply/ember-validators/ds-error';
 
 /**
  *  <i class="fa fa-hand-o-right" aria-hidden="true"></i> [See All Options](#method_validate)

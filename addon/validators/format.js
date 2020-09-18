@@ -1,5 +1,5 @@
-import EmberValidator from 'ember-cp-validations/-private/ember-validator';
-import { regularExpressions } from 'ember-validators/format';
+import EmberValidator from '@summit-electric-supply/ember-cp-validations/-private/ember-validator';
+import { regularExpressions } from '@summit-electric-supply/ember-validators/format';
 
 /**
  *  <i class="fa fa-hand-o-right" aria-hidden="true"></i> [See All Options](#method_validate)

@@ -1,7 +1,7 @@
-import EmberObject from '@ember/object';
-import DS from 'ember-data';
+import { Errors } from '@ember-data/model/-private';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import EmberObject from '@ember/object';
 
 let model, validator, message;
 
@@ -25,7 +25,7 @@ module('Unit | Validator | ds-error', function(hooks) {
     assert.expect(2);
 
     model = EmberObject.create({
-      errors: DS.Errors.create(),
+      errors: Errors.create(),
       username: null
     });
 
@@ -42,7 +42,7 @@ module('Unit | Validator | ds-error', function(hooks) {
     assert.expect(2);
 
     model = EmberObject.create({
-      errors: DS.Errors.create(),
+      errors: Errors.create(),
       username: null
     });
 

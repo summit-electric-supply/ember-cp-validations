@@ -1,9 +1,9 @@
-import { htmlSafe } from '@ember/string';
-import EmberObject from '@ember/object';
 import { alias } from '@ember/object/computed';
-import BaseValidator from 'ember-cp-validations/validators/base';
+import { htmlSafe } from '@ember/string';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';
+import EmberObject from '@ember/object';
 import setupObject from '../../helpers/setup-object';
 
 let defaultOptions, options, validator, message;

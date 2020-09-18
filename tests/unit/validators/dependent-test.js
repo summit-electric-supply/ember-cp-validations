@@ -1,7 +1,7 @@
-import EmberObject, { get } from '@ember/object';
-import { validator, buildValidations } from 'ember-cp-validations';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
+import EmberObject, { get } from '@ember/object';
 import setupObject from '../../helpers/setup-object';
 
 let Validator, message, model, options, builtOptions;
