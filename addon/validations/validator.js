@@ -1,5 +1,4 @@
 import { isNone } from '@ember/utils';
-import { deprecate } from '@ember/application/deprecations';
 
 /**
  * @module Validators
@@ -211,13 +210,6 @@ export default function(arg1, options) {
   };
 
   if (typeof arg1 === 'function') {
-    deprecate(
-      '[ember-cp-validations] `validator` no longer directly accepts ' +
-        'a function. Please use the inline validator syntax:' +
-        "\n\nvalidator('inline', { validate() {} )\n\n",
-      false,
-      { id: 'ember-cp-validations.inline-validator', until: '4.2.0' }
-    );
     props.options.validate = arg1;
     props._type = 'inline';
   } else if (typeof arg1 === 'string') {
