@@ -140,19 +140,6 @@
         "ember github-pages:commit --message \"Released '${version}'\"",
         "git push origin gh-pages:gh-pages"
       ]
-    },
-    "plugins": {
-      "release-it-lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
     }
   },
   "lint-staged": {
