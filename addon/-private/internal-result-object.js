@@ -15,7 +15,10 @@ export default EmberObject.extend({
 
   _promise: null,
   _validator: null,
-  _type: readOnly('_validator._type'),
+
+  get _type() {
+    return this._validator._type
+  },
 
   init() {
     this._super(...arguments);
@@ -25,7 +28,10 @@ export default EmberObject.extend({
     }
   },
 
-  isWarning: readOnly('_validator.isWarning'),
+  get isWarning() {
+    return this._validator.isWarning
+  },
+
   isInvalid: not('isValid'),
   isNotValidating: not('isValidating'),
   isTruelyValid: and('isNotValidating', 'isValid'),

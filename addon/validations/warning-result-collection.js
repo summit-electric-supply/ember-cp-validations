@@ -1,4 +1,4 @@
-import { not } from '@ember/object/computed';
+import { and, not, readOnly } from '@ember/object/computed';
 import { computed } from '@ember/object';
 import ResultCollection from './result-collection';
 import cycleBreaker from '../utils/cycle-breaker';

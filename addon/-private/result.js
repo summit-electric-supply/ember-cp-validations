@@ -11,8 +11,7 @@ import EmberObject, {
 import ResultCollection from '../validations/result-collection';
 import WarningResultCollection from '../validations/warning-result-collection';
 import InternalResultObject from './internal-result-object';
-
-const { readOnly } = computed;
+import { and, not, readOnly } from '@ember/object/computed';
 
 /**
  * __PRIVATE__
