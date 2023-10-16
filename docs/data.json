@@ -12,7 +12,7 @@
                 "version": "master"
             }
         ],
-        "version": "v4.1.0-beta.4"
+        "version": "v4.1.0-beta.5"
     },
     "files": {
         "addon/-private/result.js": {
@@ -512,7 +512,7 @@
             "module": "Validations",
             "namespace": "",
             "file": "addon/-private/result.js",
-            "line": 17,
+            "line": 16,
             "description": "__PRIVATE__"
         },
         "Error": {
@@ -580,7 +580,7 @@
             "module": "Validators",
             "namespace": "",
             "file": "addon/validators/base.js",
-            "line": 22
+            "line": 23
         },
         "Custom": {
             "name": "Custom",
@@ -593,7 +593,7 @@
             "module": "Validators",
             "namespace": "",
             "file": "addon/validators/base.js",
-            "line": 320,
+            "line": 321,
             "description": "Creating custom validators is very simple. To generate a validator named `unique-username` in Ember CLI\n\n```bash\nember generate validator unique-username\n```\n\nThis will create the following files\n\n* `app/validators/unique-username.js`\n* `tests/unit/validators/unique-username-test.js`\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  validate(value, options, model, attribute) {\n    return true;\n  }\n});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\n**Side Note**: Before we continue, I would suggest checking out the documentation for the {{#crossLink 'Base'}}Base Validator{{/crossLink}}.\n\nIf you want to interact with the `store` within your validator, you can simply inject the service like you would a component.\nSince you have access to your model and the current value, you should be able to send the server the right information to determine if this username is unique.\n\n```javascript\n// app/validators/unique-username.js\n\nimport Ember from 'ember';\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({\n  store: Ember.inject.service(),\n\n  validate(value, options, model, attribute) {\n    return this.get('store').findRecord('user', value).then((user) => {\n      if(user && user.id === value) {\n        let message = `The username '${value}' already exists.`;\n        let meta = user.get('meta');\n\n        if(options.showSuggestions && meta && meta.suggestions) {\n          message += \"What about one of the these: \" + meta.suggestions.join(', ');\n        }\n        return message;\n      } else {\n        return true;\n      }\n    })\n  }\n});\n```\n\n## Dependent Keys\n\nThere will be times when your validator will be dependent on some other property or object. Instead of having to\ninclude them in your option's `dependentKeys`, you can declare them in the static `getDependentsFor` hook. This hook\nreceives two parameters. The first is the `attribute` that this validator is being added to, and the second are the `options`\nthere were passed to this validator.\n\nFrom the above code sample:\n\n```javascript\n// app/validators/unique-username.js\n\nimport BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';\n\nconst UniqueUsername = BaseValidator.extend({});\n\nUniqueUsername.reopenClass({\n  getDependentsFor(attribute, options) {\n    return [];\n  }\n});\n\nexport default UniqueUsername;\n```\n\nAll dependent keys are in reference to the model's `validations.attrs` object. So when you return `['username']`,\nit will add a dependent to `model.validations.attrs.username`. If you want to add a dependent on the model, your\nkey needs to be prefixed with `model`. So when you return `['model.username']`, it will add a dependent to `model.username` instead of `model.validations.attrs.username`.\nThis means that if you have a dependent on a service, that service must be injected into the model since returning `['model.myService.someProperty']`\nwill be interpreted as `model.myService.someProperty`.\n\n## Usage\n\nTo use our unique-username validator we just have to add it to the model definition\n\n```javascript\nconst Validations = buildValidations({\n  username: validator('unique-username', {\n    showSuggestions: true\n  }),\n});\n\nexport default DS.Model.extend(Validations, {\n  'username': DS.attr('string'),\n});\n```\n\n## Testing\nAs mentioned before, the generator created a unit test for your new custom validator.\n\n```javascript\n// tests/unit/validators/unique-username-test.js\n\nimport Ember from 'ember';\nimport { moduleFor, test } from 'ember-qunit';\n\nmoduleFor('validator:unique-username', 'Unit | Validator | unique-username', {\n    needs: ['validator:messages']\n});\n\ntest('it works', function(assert) {\n    const validator =  this.subject();\n    assert.ok(validator);\n});\n```\n\nA simple test for our validation method can be as such\n\n```javascript\ntest('username is unique', function(assert) {\n    assert.expect(1);\n\n    let validator =  this.subject();\n    let done = assert.async();\n\n    validator.validate('johndoe42').then((message) => {\n      assert.equal(message, true);\n      done();\n    });\n});\n```",
             "extends": "Base"
         },
@@ -837,7 +837,7 @@
     "classitems": [
         {
             "file": "addon/-private/result.js",
-            "line": 26,
+            "line": 25,
             "itemtype": "property",
             "name": "model",
             "type": "{Object}",
@@ -846,7 +846,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 32,
+            "line": 31,
             "itemtype": "property",
             "name": "attribute",
             "type": "{String}",
@@ -855,7 +855,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 38,
+            "line": 37,
             "itemtype": "property",
             "name": "_promise",
             "async": 1,
@@ -867,7 +867,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 46,
+            "line": 45,
             "description": "The validator that returned this result",
             "itemtype": "property",
             "name": "_validator",
@@ -879,7 +879,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 54,
+            "line": 53,
             "description": "Determines if the _result object is readOnly.\n\nThis is needed because ResultCollections and global validation objects control their own\nstate via CPs",
             "itemtype": "property",
             "name": "_isReadOnly",
@@ -892,7 +892,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 73,
+            "line": 72,
             "itemtype": "property",
             "name": "isWarning",
             "readonly": "",
@@ -902,7 +902,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 80,
+            "line": 79,
             "itemtype": "property",
             "name": "isValid",
             "readonly": "",
@@ -912,7 +912,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 87,
+            "line": 86,
             "itemtype": "property",
             "name": "isInvalid",
             "readonly": "",
@@ -922,7 +922,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 94,
+            "line": 93,
             "itemtype": "property",
             "name": "isValidating",
             "readonly": "",
@@ -932,7 +932,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 101,
+            "line": 100,
             "itemtype": "property",
             "name": "isTruelyValid",
             "readonly": "",
@@ -942,7 +942,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 108,
+            "line": 107,
             "itemtype": "property",
             "name": "isTruelyInvalid",
             "readonly": "",
@@ -952,7 +952,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 115,
+            "line": 114,
             "itemtype": "property",
             "name": "isAsync",
             "readonly": "",
@@ -962,7 +962,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 122,
+            "line": 121,
             "itemtype": "property",
             "name": "message",
             "readonly": "",
@@ -972,7 +972,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 129,
+            "line": 128,
             "itemtype": "property",
             "name": "messages",
             "readonly": "",
@@ -982,7 +982,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 136,
+            "line": 135,
             "itemtype": "property",
             "name": "error",
             "readonly": "",
@@ -992,7 +992,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 143,
+            "line": 142,
             "itemtype": "property",
             "name": "errors",
             "readonly": "",
@@ -1002,7 +1002,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 150,
+            "line": 149,
             "itemtype": "property",
             "name": "warningMessage",
             "readonly": "",
@@ -1012,7 +1012,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 157,
+            "line": 156,
             "itemtype": "property",
             "name": "warningMessages",
             "readonly": "",
@@ -1022,7 +1022,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 164,
+            "line": 163,
             "itemtype": "property",
             "name": "warning",
             "readonly": "",
@@ -1032,7 +1032,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 171,
+            "line": 170,
             "itemtype": "property",
             "name": "warnings",
             "readonly": "",
@@ -1042,7 +1042,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 178,
+            "line": 177,
             "description": "This hold all the logic for the above CPs. We do this so we can easily switch this object out with a different validations object",
             "itemtype": "property",
             "name": "_result",
@@ -1054,7 +1054,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 208,
+            "line": 207,
             "description": "Update the current validation result object with the given value\n- If value is undefined or null, set isValid to false\n- If value is a validations object from a different model/object, set the _result object to the one given (belongs-to)\n- If value is a collection of result objects, create a Validation Result Collection and set that to the _result object (has-many)\n- If value is a string, set the message to the given string and set isValid to false\n- If value is a boolean, set isValid to result\n- If value is a pojo, update _result object with the information given",
             "itemtype": "method",
             "name": "update",
@@ -1071,7 +1071,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 249,
+            "line": 248,
             "description": "Override the internal _result property.",
             "itemtype": "method",
             "name": "_overrideResult",
@@ -1088,7 +1088,7 @@
         },
         {
             "file": "addon/-private/result.js",
-            "line": 259,
+            "line": 258,
             "description": "Promise handler",
             "itemtype": "method",
             "name": "_handlePromise",
@@ -2021,7 +2021,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 27,
+            "line": 28,
             "description": "Options passed in to the validator when defined in the model",
             "itemtype": "property",
             "name": "options",
@@ -2031,7 +2031,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 34,
+            "line": 35,
             "description": "Default validation options for this specific attribute",
             "itemtype": "property",
             "name": "defaultOptions",
@@ -2041,7 +2041,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 41,
+            "line": 42,
             "description": "Global validation options for this model",
             "itemtype": "property",
             "name": "globalOptions",
@@ -2051,7 +2051,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 48,
+            "line": 49,
             "description": "Model instance",
             "itemtype": "property",
             "name": "model",
@@ -2061,7 +2061,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 55,
+            "line": 56,
             "description": "Attributed name of the model this validator is attached to",
             "itemtype": "property",
             "name": "attribute",
@@ -2071,7 +2071,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 62,
+            "line": 63,
             "description": "Error message object. Populated by validators/messages",
             "itemtype": "property",
             "name": "errorMessages",
@@ -2081,7 +2081,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 69,
+            "line": 70,
             "itemtype": "property",
             "name": "isWarning",
             "type": "{Boolean}",
@@ -2090,7 +2090,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 75,
+            "line": 76,
             "description": "Validator type",
             "itemtype": "property",
             "name": "_type",
@@ -2102,7 +2102,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 83,
+            "line": 84,
             "description": "Validators cache used by `test` api",
             "itemtype": "property",
             "name": "_testValidatorCache",
@@ -2114,7 +2114,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 115,
+            "line": 116,
             "description": "Build options hook. Merges default options into options object.\nThis method gets called on init and is the ideal place to normalize your options.\nThe [presence validator](https://github.com/offirgolan/ember-cp-validations/blob/master/addon/validators/presence.js) is a good example to checkout",
             "itemtype": "method",
             "name": "buildOptions",
@@ -2144,7 +2144,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 140,
+            "line": 141,
             "description": "Used to retrieve the value to validate.\nThis method gets called right before `validate` and the returned value\ngets passed into the validate method.",
             "itemtype": "method",
             "name": "value",
@@ -2168,7 +2168,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 154,
+            "line": 155,
             "description": "Wrapper method to `value` that passes the necessary parameters",
             "itemtype": "method",
             "name": "getValue",
@@ -2183,7 +2183,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 166,
+            "line": 167,
             "description": "The validate method is where all of your logic should go.\nIt will get passed in the current value of the attribute this validator is attached to.\nWithin the validator object, you will have access to the following properties:",
             "itemtype": "method",
             "name": "validate",
@@ -2217,7 +2217,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 185,
+            "line": 186,
             "description": "Used by all pre-defined validators to build an error message that is present\nin `validators/message` or declared in your i18n solution.\n\nIf we extended our default messages to include `uniqueUsername: '{username} already exists'`,\nwe can use this method to generate our error message.\n\n```javascript\nvalidate(value, options) {\n  const exists = false;\n\n  // check with server if username exists...\n\n  if(exists) {\n    // The username key on the options object will be used to create the error message\n    options.username = value;\n    return this.createErrorMessage('uniqueUsername', value, options);\n  }\n\n  return true;\n}\n```\n\nIf we input `johndoe` and that username already exists, the returned message would be `'johndoe already exists'`.",
             "itemtype": "method",
             "name": "createErrorMessage",
@@ -2247,7 +2247,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 242,
+            "line": 243,
             "description": "Easily compose complicated validations by using this method to validate\nagainst other validators.\n\n```javascript\nvalidate(value, options, ...args) {\n  let result = this.test('presence', value, { presence: true }, ...args);\n\n  if (!result.isValid) {\n    return result.message;\n  }\n\n  // You can even test against your own custom validators\n  result = this.test('my-validator', value, { foo: 'bar' }, ...args);\n\n  if (!result.isValid) {\n    return result.message;\n  }\n\n  result = this.test('number', value, { integer: true }, ...args);\n\n  // You can easily override the error message by returning your own.\n  if (!result.isValid) {\n     return 'This value must be an integer!';\n   }\n\n  // Add custom logic...\n\n  return true;\n}\n```",
             "itemtype": "method",
             "name": "test",
@@ -2272,7 +2272,7 @@
         },
         {
             "file": "addon/validators/base.js",
-            "line": 304,
+            "line": 305,
             "description": "Generate the needed dependent keys for this validator",
             "itemtype": "method",
             "name": "getDependentsFor",
