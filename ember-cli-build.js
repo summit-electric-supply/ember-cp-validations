@@ -8,8 +8,9 @@ module.exports = function (defaults) {
     snippetPaths: ['snippets', 'tests/dummy/snippets'],
 
     'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapCSS: false
+      importBootstrapCSS: false,
+      blacklist: ['bs-popover', 'bs-accordion'],
+      bootstrapVersion: 5
     }
   });
 
