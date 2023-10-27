@@ -1,7 +1,7 @@
 export { getDependentKeys, isDescriptor } from '../-private/ember-internals';
 import { A as emberArray, isArray } from '@ember/array';
 import { assign } from '@ember/polyfills';
-import { isHTMLSafe } from '@ember/string';
+import { isHTMLSafe } from '@ember/template';
 import { ManyArray, PromiseManyArray } from '@ember-data/model/-private';
 import { typeOf } from '@ember/utils';
 import ArrayProxy from '@ember/array/proxy';

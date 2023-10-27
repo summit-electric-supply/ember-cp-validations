@@ -1,5 +1,5 @@
 import { alias } from '@ember/object/computed';
-import { htmlSafe } from '@ember/string';
+import { htmlSafe } from '@ember/template';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import BaseValidator from '@summit-electric-supply/ember-cp-validations/validators/base';
