@@ -144,5 +144,10 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "exports": {
+    ".": "./addon/index.js",
+    "./validators/*": "./addon/validators/*.js",
+    "./*": "./addon/*"
   }
 }
