@@ -43,7 +43,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@summit-electric-supply/ember-validators": "^2.1.12",
+    "@summit-electric-supply/ember-validators": "^2.1.14",
     "broccoli-funnel": "^3.0.8",
     "ember-cli-babel": "^8.3.1",
     "ember-cli-typescript": "^5.3.0"
@@ -128,7 +128,8 @@
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
     "webpack": "5",
-    "yuidoc-ember-theme": "^2.0.1"
+    "yuidoc-ember-theme": "^2.0.1",
+    "dayjs": "^1.11.10"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
