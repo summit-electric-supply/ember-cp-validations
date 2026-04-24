@@ -54,8 +54,8 @@
                     <li class="panel panel-default">
                         <div class="panel-heading" role="tab" id="sidebar-version-heading">
                             <h4 class="panel-title">
-                                <a role="button" href="https://github.com/summit-electric-supply/ember-cp-validations/commits/v4.1.3" target="_blank">
-                                  Tag: v4.1.3
+                                <a role="button" href="https://github.com/summit-electric-supply/ember-cp-validations/commits/v4.1.4" target="_blank">
+                                  Tag: v4.1.4
                                 </a>
                             </h4>
                         </div>
@@ -183,7 +183,7 @@
 <div class="file">
     <pre class="prettyprint linenums">
 import Base from &#x27;@summit-electric-supply/ember-cp-validations/validators/base&#x27;;
-import { assign } from &#x27;@ember/polyfills&#x27;;
+// Polyfill removed: use native Object.assign instead
 import { assert } from &#x27;@ember/debug&#x27;;
 
 /**
@@ -223,7 +223,7 @@ export default Base.extend({
       options &amp;&amp; typeof options.validate === &#x27;function&#x27;
     );
 
-    const opts = assign({}, options);
+    const opts = Object.assign({}, options);
 
     this.validate = opts.validate;
     delete opts.validate;

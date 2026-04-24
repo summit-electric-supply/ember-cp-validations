@@ -54,8 +54,8 @@
                     <li class="panel panel-default">
                         <div class="panel-heading" role="tab" id="sidebar-version-heading">
                             <h4 class="panel-title">
-                                <a role="button" href="https://github.com/summit-electric-supply/ember-cp-validations/commits/v4.1.3" target="_blank">
-                                  Tag: v4.1.3
+                                <a role="button" href="https://github.com/summit-electric-supply/ember-cp-validations/commits/v4.1.4" target="_blank">
+                                  Tag: v4.1.4
                                 </a>
                             </h4>
                         </div>
@@ -187,7 +187,7 @@ import { Promise } from &#x27;rsvp&#x27;;
 import EmberObject, { computed, set, get } from &#x27;@ember/object&#x27;;
 import { A as emberArray, makeArray, isArray } from &#x27;@ember/array&#x27;;
 import { readOnly } from &#x27;@ember/object/computed&#x27;;
-import { assign } from &#x27;@ember/polyfills&#x27;;
+// Polyfill removed: use native Object.assign instead
 import { run } from &#x27;@ember/runloop&#x27;;
 import { guidFor } from &#x27;@ember/object/internals&#x27;;
 import { isEmpty, isNone } from &#x27;@ember/utils&#x27;;
@@ -394,7 +394,7 @@ function createValidationsClass(inheritedValidationsClass, validations, model) {
   ) {
     let inheritedValidations = inheritedValidationsClass.create();
 
-    validationRules = assign(
+    validationRules = Object.assign(
       validationRules,
       inheritedValidations.get(&#x27;_validationRules&#x27;)
     );
