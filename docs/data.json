@@ -12,7 +12,7 @@
                 "version": "master"
             }
         ],
-        "version": "v4.1.15"
+        "version": "v4.1.19"
     },
     "files": {
         "addon/-private/result.js": {
@@ -653,7 +653,7 @@
             "module": "Validators",
             "namespace": "",
             "file": "node_modules/@summit-electric-supply/ember-validators/addon/date.js",
-            "line": 13,
+            "line": 6,
             "description": "<i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> [See All Options](#method_validate)\n\nValidate over a date range. Uses [MomentJS](http://momentjs.com/) for date mathematics and calculations.\n\n**Note**: MomentJS must be installed to be able to use this validator. The easiest way to do this is to install [ember-moment](https://github.com/stefanpenner/ember-moment)\n\n ## Examples\n\n If `before`, `onOrBefore`, `after`, or `onOrAfter` is set to **now**, the value given to the validator will be tested against the current date and time.\n\n```javascript\nvalidator('date', {\n  after: 'now',\n  before: '1/1/2020',\n  precision: 'day',\n  format: 'M/D/YYY',\n  errorFormat: 'M/D/YYY'\n})\n```",
             "extends": "Base"
         },
@@ -2529,7 +2529,7 @@
         },
         {
             "file": "node_modules/@summit-electric-supply/ember-validators/addon/date.js",
-            "line": 18,
+            "line": 11,
             "itemtype": "method",
             "name": "validate",
             "params": [
