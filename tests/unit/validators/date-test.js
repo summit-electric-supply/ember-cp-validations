@@ -1,6 +1,7 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-const moment = require('moment');
+import moment from 'moment';
+
 
 let options, builtOptions, validator, message;
 
