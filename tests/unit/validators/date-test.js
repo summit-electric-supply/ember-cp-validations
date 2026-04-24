@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 
 let options, builtOptions, validator, message;
@@ -99,7 +99,7 @@ module('Unit | Validator | date', function(hooks) {
 
   test('before now', function(assert) {
     assert.expect(2);
-    let now = moment().format('MMM Do, YYYY');
+    let now = dayjs().format('MMM D, YYYY');
     options = {
       before: 'now'
     };
@@ -134,7 +134,7 @@ module('Unit | Validator | date', function(hooks) {
 
   test('before now or on', function(assert) {
     assert.expect(3);
-    let now = moment().format('MMM Do, YYYY');
+    let now = dayjs().format('MMM D, YYYY');
     options = {
       onOrBefore: 'now'
     };
@@ -163,7 +163,7 @@ module('Unit | Validator | date', function(hooks) {
     ];
 
     assert.expect(precisions.length * 3 - 1);
-    let now = moment(new Date('2013-02-08T09:30:26'));
+    let now = dayjs('2013-02-08T09:30:26');
     let dateString = now.toString();
     let nowMessage = now.format('MMM Do, YYYY');
 
@@ -176,7 +176,7 @@ module('Unit | Validator | date', function(hooks) {
       assert.equal(message, true);
 
       message = validator.validate(
-        moment(now).add(1, precision),
+        dayjs(now).add(1, precision),
         builtOptions.toObject()
       );
       assert.equal(message, `This field must be on or before ${nowMessage}`);
@@ -188,7 +188,7 @@ module('Unit | Validator | date', function(hooks) {
         });
 
         message = validator.validate(
-          moment(now).add(1, precisions),
+          dayjs(now).add(1, precisions),
           builtOptions.toObject()
         );
         assert.equal(message, true);
@@ -214,7 +214,7 @@ module('Unit | Validator | date', function(hooks) {
 
   test('after now', function(assert) {
     assert.expect(2);
-    let now = moment().format('MMM Do, YYYY');
+    let now = dayjs().format('MMM D, YYYY');
     options = {
       after: 'now'
     };
@@ -249,7 +249,7 @@ module('Unit | Validator | date', function(hooks) {
 
   test('after now or on', function(assert) {
     assert.expect(3);
-    let now = moment().format('MMM Do, YYYY');
+    let now = dayjs().format('MMM D, YYYY');
     options = {
       onOrAfter: 'now',
       precision: 'second'
@@ -279,7 +279,7 @@ module('Unit | Validator | date', function(hooks) {
     ];
 
     assert.expect(precisions.length * 3 - 1);
-    let now = moment(new Date('2013-02-08T09:30:26'));
+    let now = dayjs('2013-02-08T09:30:26');
     let dateString = now.toString();
     let nowMessage = now.format('MMM Do, YYYY');
 
@@ -292,7 +292,7 @@ module('Unit | Validator | date', function(hooks) {
       assert.equal(message, true);
 
       message = validator.validate(
-        moment(now).subtract(1, precision),
+        dayjs(now).subtract(1, precision),
         builtOptions.toObject()
       );
       assert.equal(message, `This field must be on or after ${nowMessage}`);
@@ -304,7 +304,7 @@ module('Unit | Validator | date', function(hooks) {
         });
 
         message = validator.validate(
-          moment(now).subtract(1, precisions),
+          dayjs(now).subtract(1, precisions),
           builtOptions.toObject()
         );
         assert.equal(message, true);
