@@ -6,7 +6,10 @@
     "ember-addon"
   ],
   "homepage": "https://github.com/summit-electric-supply/ember-cp-validations",
-  "repository": "https://github.com/summit-electric-supply/ember-cp-validations",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/summit-electric-supply/ember-cp-validations.git"
+  },
   "contributors": [
     "Ben Limmer <hello@benlimmer.com>",
     "Offir Golan <offirgolan@gmail.com> (https://github.com/offirgolan)",
