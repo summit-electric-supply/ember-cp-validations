@@ -12,7 +12,7 @@
                 "version": "master"
             }
         ],
-        "version": "v4.1.11"
+        "version": "v4.1.12"
     },
     "files": {
         "addon/-private/result.js": {
