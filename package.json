@@ -43,7 +43,8 @@
     "@summit-electric-supply/ember-validators": "^2.1.2",
     "broccoli-funnel": "^3.0.2",
     "ember-cli-babel": "^7.26.6",
-    "ember-cli-typescript": "^5.1.1"
+    "ember-cli-typescript": "^5.1.1",
+    "moment": "^2.30.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -140,7 +141,7 @@
   "release-it": {
     "hooks": {
       "after:release": [
-        "git push origin gh-pages:gh-pages"
+        "npm run deploy"
       ]
     }
   },
