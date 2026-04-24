@@ -1,7 +1,7 @@
 // BEGIN-SNIPPET user-detail-model
 import { validator, buildValidations } from '@summit-electric-supply/ember-cp-validations';
 import Model, { attr } from '@ember-data/model';
-import moment from 'moment';
+const moment = require('moment');
 
 const Validations = buildValidations(
   {
