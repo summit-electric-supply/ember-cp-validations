@@ -2,7 +2,6 @@ export { getDependentKeys, isDescriptor } from '../-private/ember-internals';
 import { A as emberArray, isArray } from '@ember/array';
 // Polyfill removed: use native Object.assign instead
 import { isHTMLSafe } from '@ember/template';
-import { ManyArray, PromiseManyArray } from '@ember-data/model/-private';
 import { typeOf } from '@ember/utils';
 import ArrayProxy from '@ember/array/proxy';
 import canInvoke from '@summit-electric-supply/ember-validators/utils/can-invoke'
@@ -34,13 +33,7 @@ export function isDsModel(o) {
   return !!(o && o instanceof Model);
 }
 
-export function isDSManyArray(o) {
-  return !!(
-    o &&
-    isArray(o) &&
-    (o instanceof PromiseManyArray || o instanceof ManyArray)
-  );
-}
+
 
 export function isEmberObject(o) {
   return !!(o && o instanceof EmberObject);
@@ -60,9 +53,7 @@ export function getValidatableValue(value) {
     return value;
   }
 
-  if (isDSManyArray(value)) {
-    return emberArray(value.filter(v => isValidatable(v)));
-  }
+
 
   return isValidatable(value) ? value : undefined;
 }

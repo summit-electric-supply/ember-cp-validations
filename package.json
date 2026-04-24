@@ -40,7 +40,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@summit-electric-supply/ember-validators": "^2.1.4",
+    "@summit-electric-supply/ember-validators": "^2.1.5",
     "broccoli-funnel": "^3.0.2",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-typescript": "^5.1.1",
