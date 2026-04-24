@@ -1,6 +1,6 @@
 {
   "name": "@summit-electric-supply/ember-cp-validations",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "Ember computed property based validation library",
   "keywords": [
     "ember-addon"
