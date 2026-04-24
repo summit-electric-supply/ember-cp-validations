@@ -3,7 +3,7 @@ import { Promise } from 'rsvp';
 import EmberObject, { computed, set, get } from '@ember/object';
 import { A as emberArray, makeArray, isArray } from '@ember/array';
 import { readOnly } from '@ember/object/computed';
-import { assign } from '@ember/polyfills';
+// Polyfill removed: use native Object.assign instead
 import { run } from '@ember/runloop';
 import { guidFor } from '@ember/object/internals';
 import { isEmpty, isNone } from '@ember/utils';
@@ -210,7 +210,7 @@ function createValidationsClass(inheritedValidationsClass, validations, model) {
   ) {
     let inheritedValidations = inheritedValidationsClass.create();
 
-    validationRules = assign(
+    validationRules = Object.assign(
       validationRules,
       inheritedValidations.get('_validationRules')
     );

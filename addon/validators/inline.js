@@ -1,5 +1,5 @@
 import Base from '@summit-electric-supply/ember-cp-validations/validators/base';
-import { assign } from '@ember/polyfills';
+// Polyfill removed: use native Object.assign instead
 import { assert } from '@ember/debug';
 
 /**
@@ -39,7 +39,7 @@ export default Base.extend({
       options && typeof options.validate === 'function'
     );
 
-    const opts = assign({}, options);
+    const opts = Object.assign({}, options);
 
     this.validate = opts.validate;
     delete opts.validate;

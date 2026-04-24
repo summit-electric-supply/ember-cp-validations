@@ -1,6 +1,6 @@
 export { getDependentKeys, isDescriptor } from '../-private/ember-internals';
 import { A as emberArray, isArray } from '@ember/array';
-import { assign } from '@ember/polyfills';
+// Polyfill removed: use native Object.assign instead
 import { isHTMLSafe } from '@ember/template';
 import { ManyArray, PromiseManyArray } from '@ember-data/model/-private';
 import { typeOf } from '@ember/utils';
@@ -72,7 +72,7 @@ export function mergeOptions(...options) {
 
   for (let i = options.length - 1; i >= 0; i--) {
     let _o = options[i];
-    assign(o, isObject(_o) ? _o : {});
+    Object.assign(o, isObject(_o) ? _o : {});
   }
 
   return o;
